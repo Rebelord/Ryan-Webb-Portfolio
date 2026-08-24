@@ -94,7 +94,7 @@ export default function Home() {
         <div className="section-heading">
           <p className="eyebrow">Selected work</p>
           <h2>Products, websites, and the thinking behind them.</h2>
-          <p className="section-count">(07 live projects)</p>
+          <p className="section-count">(08 selected projects)</p>
         </div>
 
         <article className="product-feature">
@@ -128,6 +128,41 @@ export default function Home() {
             <a href="#contact">
               Ask about ApplyKit <Arrow diagonal />
             </a>
+          </div>
+        </article>
+
+        <article className="product-feature product-feature--quest">
+          <div className="product-copy">
+            <p className="project-category">Product design · Java · AI-assisted development</p>
+            <h3>The Chosen Quest</h3>
+            <p className="product-lead">A classroom RPG, redesigned into a cohesive desktop experience.</p>
+            <p>
+              An active private-beta redesign combining gameplay systems, a
+              modular fantasy interface, visual quality control, and release
+              testing. The work explores how human product direction and
+              AI-assisted implementation can stay accountable to clear design
+              constraints.
+            </p>
+            <ul className="project-tags" aria-label="The Chosen Quest capabilities">
+              <li>Product direction</li>
+              <li>Interface systems</li>
+              <li>AI workflow direction</li>
+            </ul>
+            <a href="/work/the-chosen-quest">
+              View the case study <Arrow diagonal />
+            </a>
+          </div>
+
+          <div className="product-visual product-visual--quest">
+            <Image
+              src="/projects/the-chosen-quest/character-creation.png"
+              alt="The Chosen Quest character creation interface showing race, class, Combat Path, portrait, statistics, and equipment choices"
+              width={1440}
+              height={900}
+              loading="lazy"
+              unoptimized
+            />
+            <span className="project-number">02 / Independent case study</span>
           </div>
         </article>
 
