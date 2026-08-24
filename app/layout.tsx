@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://ryan-webb-portfolio.rwebb626.chatgpt.site'),
   title: 'Ryan Webb — Designer & Developer',
   description:
     'Ryan Webb is a multidisciplinary creative learning React and building thoughtful digital products.',
+  alternates: { canonical: '/' },
   openGraph: {
     title: 'Ryan Webb — Designer & Developer',
     description: 'Thoughtful digital experiences, built with curiosity.',
