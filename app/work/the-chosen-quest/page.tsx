@@ -101,7 +101,7 @@ export default function TheChosenQuestCaseStudy() {
           </figure>
         </header>
 
-        <section className="case-section section-shell case-overview">
+        <section className="case-section section-shell case-overview" data-reveal="section">
           <div className="case-section-title">
             <p className="eyebrow">01 / Overview</p>
             <h2>A visual refresh became a connected product effort.</h2>
@@ -128,7 +128,7 @@ export default function TheChosenQuestCaseStudy() {
         </section>
 
         <section className="case-section case-section--ink">
-          <div className="section-shell case-process">
+          <div className="section-shell case-process" data-reveal="section">
             <div className="case-section-title">
               <p className="eyebrow">02 / The collaboration model</p>
               <h2>AI increased execution capacity. Judgment stayed human.</h2>
@@ -153,7 +153,7 @@ export default function TheChosenQuestCaseStudy() {
           </div>
         </section>
 
-        <section className="case-section section-shell decision-story">
+        <section className="case-section section-shell decision-story" data-reveal="section">
           <div className="decision-copy">
             <p className="eyebrow">03 / Character system</p>
             <h2>One system, not sixteen unrelated screens.</h2>
@@ -184,14 +184,14 @@ export default function TheChosenQuestCaseStudy() {
           </figure>
         </section>
 
-        <section className="results-strip section-shell" aria-label="System scope">
+        <section className="results-strip section-shell" aria-label="System scope" data-reveal="stagger">
           <div><strong>4</strong><span>Playable races</span></div>
           <div><strong>4</strong><span>Playable classes</span></div>
           <div><strong>16</strong><span>Supported race/class combinations</span></div>
           <div><strong>1</strong><span>Connected identity system</span></div>
         </section>
 
-        <section className="case-section section-shell decision-story decision-story--reverse">
+        <section className="case-section section-shell decision-story decision-story--reverse" data-reveal="section">
           <div className="decision-copy">
             <p className="eyebrow">04 / Gameplay systems</p>
             <h2>Turning class choice into a play style.</h2>
@@ -222,7 +222,7 @@ export default function TheChosenQuestCaseStudy() {
           </figure>
         </section>
 
-        <section className="case-section section-shell qa-story">
+        <section className="case-section section-shell qa-story" data-reveal="section">
           <div className="case-section-title">
             <p className="eyebrow">05 / Quality process</p>
             <h2>Making polish testable.</h2>
@@ -252,7 +252,7 @@ export default function TheChosenQuestCaseStudy() {
           </figure>
         </section>
 
-        <section className="case-section section-shell">
+        <section className="case-section section-shell" data-reveal="section">
           <div className="gallery-heading">
             <div>
               <p className="eyebrow">06 / Current experience</p>
@@ -264,7 +264,7 @@ export default function TheChosenQuestCaseStudy() {
               release preparation into one visual system.
             </p>
           </div>
-          <div className="case-gallery">
+          <div className="case-gallery" data-reveal="stagger">
             <figure className="gallery-wide">
               <Image src="/projects/the-chosen-quest/exploration.png" alt="Fantasy RPG exploration interface with hero state, illustrated location, travel actions, and world map" width={1440} height={900} unoptimized />
               <figcaption>Exploration keeps hero state, location context, actions, and map information visible together.</figcaption>
@@ -281,7 +281,7 @@ export default function TheChosenQuestCaseStudy() {
         </section>
 
         <section className="case-section case-section--acid">
-          <div className="section-shell case-closing">
+          <div className="section-shell case-closing" data-reveal="section">
             <div>
               <p className="eyebrow">Reflection</p>
               <h2>Intent, implementation, evidence, revision.</h2>

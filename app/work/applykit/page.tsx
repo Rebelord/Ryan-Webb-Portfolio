@@ -99,7 +99,7 @@ export default function ApplyKitCaseStudy() {
           </figure>
         </header>
 
-        <section className="case-section section-shell case-overview">
+        <section className="case-section section-shell case-overview" data-reveal="section">
           <div className="case-section-title">
             <p className="eyebrow">01 / Overview</p>
             <h2>One place for the evidence and the next action.</h2>
@@ -127,7 +127,7 @@ export default function ApplyKitCaseStudy() {
         </section>
 
         <section className="case-section case-section--ink applykit-score-section">
-          <div className="section-shell">
+          <div className="section-shell" data-reveal="section">
             <div className="case-section-title">
               <p className="eyebrow">02 / Explainable fit</p>
               <h2>A score that shows its work.</h2>
@@ -152,7 +152,7 @@ export default function ApplyKitCaseStudy() {
           </div>
         </section>
 
-        <section className="case-section section-shell decision-story">
+        <section className="case-section section-shell decision-story" data-reveal="section">
           <div className="decision-copy">
             <p className="eyebrow">03 / Search profile</p>
             <h2>Make the model personal and inspectable.</h2>
@@ -181,14 +181,14 @@ export default function ApplyKitCaseStudy() {
           </figure>
         </section>
 
-        <section className="results-strip section-shell" aria-label="ApplyKit system scope">
+        <section className="results-strip section-shell" aria-label="ApplyKit system scope" data-reveal="stagger">
           <div><strong>5</strong><span>Application statuses</span></div>
           <div><strong>4</strong><span>Scoring signal groups</span></div>
           <div><strong>100</strong><span>Point score model</span></div>
           <div><strong>JSON</strong><span>Local data core</span></div>
         </section>
 
-        <section className="case-section section-shell decision-story decision-story--reverse">
+        <section className="case-section section-shell decision-story decision-story--reverse" data-reveal="section">
           <div className="decision-copy">
             <p className="eyebrow">04 / Stage-aware workflow</p>
             <h2>Reveal interview tools when they become useful.</h2>
@@ -217,7 +217,7 @@ export default function ApplyKitCaseStudy() {
           </figure>
         </section>
 
-        <section className="case-section section-shell">
+        <section className="case-section section-shell" data-reveal="section">
           <div className="gallery-heading">
             <div>
               <p className="eyebrow">05 / Scale &amp; portability</p>
@@ -229,7 +229,7 @@ export default function ApplyKitCaseStudy() {
               help an existing search move in—and let the data move back out.
             </p>
           </div>
-          <div className="case-gallery applykit-gallery">
+          <div className="case-gallery applykit-gallery" data-reveal="stagger">
             <figure>
               <Image src="/projects/applykit/add-job.png" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1119} height={1328} unoptimized />
               <figcaption>Focused entry supports manual details alongside URL-based draft import.</figcaption>
@@ -246,7 +246,7 @@ export default function ApplyKitCaseStudy() {
         </section>
 
         <section className="case-section case-section--acid">
-          <div className="section-shell case-closing">
+          <div className="section-shell case-closing" data-reveal="section">
             <div>
               <p className="eyebrow">Reflection</p>
               <h2>Clarity, explanation, ownership.</h2>

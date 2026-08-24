@@ -91,13 +91,13 @@ export default function Home() {
       </section>
 
       <section className="work section-shell" id="work">
-        <div className="section-heading">
+        <div className="section-heading" data-reveal="section">
           <p className="eyebrow">Selected work</p>
           <h2>Products, websites, and the thinking behind them.</h2>
           <p className="section-count">(08 selected projects)</p>
         </div>
 
-        <article className="product-feature">
+        <article className="product-feature" data-reveal="section">
           <div className="product-visual">
             <Image
               src="/projects/applykit-overview.png"
@@ -131,7 +131,7 @@ export default function Home() {
           </div>
         </article>
 
-        <article className="product-feature product-feature--quest">
+        <article className="product-feature product-feature--quest" data-reveal="section">
           <div className="product-copy">
             <p className="project-category">Product design · Java · AI-assisted development</p>
             <h3>The Chosen Quest</h3>
@@ -166,7 +166,7 @@ export default function Home() {
           </div>
         </article>
 
-        <div className="client-intro">
+        <div className="client-intro" data-reveal="section">
           <div>
             <p className="eyebrow">Selected client websites</p>
             <h3>Work made in collaboration.</h3>
@@ -179,7 +179,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="client-grid">
+        <div className="client-grid" data-reveal="stagger">
           {clientSites.map((site) => (
             <a
               className="client-card"
@@ -209,7 +209,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="archive-intro">
+        <div className="archive-intro" data-reveal="section">
           <div>
             <p className="eyebrow">From the design archive</p>
             <h3>Full-page concepts, gathered in Figma.</h3>
@@ -224,7 +224,7 @@ export default function Home() {
           </a>
         </div>
 
-        <div className="archive-grid">
+        <div className="archive-grid" data-reveal="stagger">
           {archiveDesigns.map((design, index) => (
             <figure className={`archive-card ${design.tone}`} key={design.title}>
               <div className="archive-browser">
@@ -248,12 +248,12 @@ export default function Home() {
       </section>
 
       <section className="about section-shell" id="about">
-        <div className="about-intro">
+        <div className="about-intro" data-reveal="section">
           <p className="eyebrow">A little about me</p>
           <h2>Curious by default. <em>Always learning.</em></h2>
         </div>
 
-        <div className="about-grid">
+        <div className="about-grid" data-reveal="section">
           <div className="portrait-card" aria-hidden="true">
             <div className="portrait-monogram">R</div>
             <p>Make it clear.<br />Make it useful.<br />Make it yours.</p>
@@ -288,7 +288,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="contact section-shell" id="contact">
+      <section className="contact section-shell" id="contact" data-reveal="section">
         <p className="eyebrow">Have a project in mind?</p>
         <h2>Let&apos;s make something <em>worth sharing.</em></h2>
         <a
