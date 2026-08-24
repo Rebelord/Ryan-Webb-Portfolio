@@ -1,12 +1,12 @@
 import Image from 'next/image';
 
 const clientSites = [
-  { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/' },
-  { number: '02', title: 'Diversified Wealth Management', category: 'Wealth management', url: 'https://www.diversifiedwealthmanagement.com/' },
-  { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/' },
-  { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/' },
-  { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/' },
-  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/' },
+  { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/', image: '/projects/client-sites/keim-financial-group.jpg', alt: 'Sailboat crossing bright blue water, imagery featured by Keim Financial Group', width: 2092, height: 675 },
+  { number: '02', title: 'Diversified Wealth Management', category: 'Wealth management', url: 'https://www.diversifiedwealthmanagement.com/', image: '/projects/client-sites/diversified-wealth-management.jpg', alt: 'Autumn shoreline and lake landscape featured by Diversified Wealth Management', width: 2000, height: 1335 },
+  { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/', image: '/projects/client-sites/bowen-financial-group.webp', alt: 'Family gathered together at home, imagery featured by Bowen Financial Group', width: 2000, height: 1132 },
+  { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/', image: '/projects/client-sites/osteostrong-tustin.jpg', alt: 'OsteoStrong Tustin lobby and training space', width: 1920, height: 1440 },
+  { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/', image: '/projects/client-sites/jaimes-plumbing.jpg', alt: 'Plumbing tools and fixtures featured by Jaime’s Plumbing', width: 1920, height: 1280 },
+  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/', image: '/projects/client-sites/water-of-texas.jpg', alt: 'Residential water-softening equipment installed by Water of Texas', width: 1280, height: 720 },
 ];
 
 const archiveDesigns = [
@@ -189,10 +189,22 @@ export default function Home() {
               rel="noreferrer"
               aria-label={`Visit ${site.title}`}
             >
-              <span className="client-number">{site.number}</span>
-              <p>{site.category}</p>
-              <h4>{site.title}</h4>
-              <span className="client-link">View live site <Arrow diagonal /></span>
+              <div className="client-card-media">
+                <Image
+                  src={site.image}
+                  alt={site.alt}
+                  width={site.width}
+                  height={site.height}
+                  loading="lazy"
+                  unoptimized
+                />
+                <span className="client-number">{site.number}</span>
+              </div>
+              <div className="client-card-content">
+                <p>{site.category}</p>
+                <h4>{site.title}</h4>
+                <span className="client-link">View live site <Arrow diagonal /></span>
+              </div>
             </a>
           ))}
         </div>
