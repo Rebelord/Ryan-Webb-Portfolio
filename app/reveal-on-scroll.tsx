@@ -32,7 +32,7 @@ export default function RevealOnScroll() {
           observer.unobserve(entry.target);
         });
       },
-      { rootMargin: '0px 0px -10% 0px', threshold: 0.08 },
+      { rootMargin: '0px 0px -22% 0px', threshold: 0.1 },
     );
 
     const registerReveals = () => {
@@ -42,10 +42,7 @@ export default function RevealOnScroll() {
         if (observed.has(element)) return;
         observed.add(element);
 
-        const bounds = element.getBoundingClientRect();
-        const startsInView = bounds.top < window.innerHeight * 0.94 && bounds.bottom > 0;
-
-        if (reducedMotion || startsInView) {
+        if (reducedMotion) {
           element.classList.add('is-revealed');
         } else {
           observer.observe(element);
