@@ -1,12 +1,28 @@
 'use client';
 
 import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function RevealOnScroll() {
+  const router = useRouter();
+
   useEffect(() => {
     const root = document.documentElement;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const observed = new WeakSet<Element>();
+    let pendingHash = '';
+
+    const scrollToHash = (hash: string) => {
+      const id = decodeURIComponent(hash.replace(/^#/, ''));
+      const target = document.getElementById(id);
+      if (!target) return false;
+
+      target.scrollIntoView({
+        behavior: reducedMotion ? 'auto' : 'smooth',
+        block: 'start',
+      });
+      return true;
+    };
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -37,20 +53,61 @@ export default function RevealOnScroll() {
       });
 
       root.classList.add('reveal-ready');
+
+      if (pendingHash && scrollToHash(pendingHash)) {
+        window.history.pushState(null, '', `${window.location.pathname}${pendingHash}`);
+        pendingHash = '';
+      }
+    };
+
+    const handleHashClick = (event: MouseEvent) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) return;
+
+      const origin = event.target;
+      if (!(origin instanceof Element)) return;
+
+      const anchor = origin.closest<HTMLAnchorElement>('a[href]');
+      if (!anchor || anchor.target || anchor.hasAttribute('download')) return;
+
+      const destination = new URL(anchor.href, window.location.href);
+      if (destination.origin !== window.location.origin || !destination.hash) return;
+
+      const currentPath = `${window.location.pathname}${window.location.search}`;
+      const destinationPath = `${destination.pathname}${destination.search}`;
+
+      if (destinationPath === currentPath) {
+        if (!document.getElementById(decodeURIComponent(destination.hash.slice(1)))) return;
+        event.preventDefault();
+        window.history.pushState(null, '', `${destinationPath}${destination.hash}`);
+        scrollToHash(destination.hash);
+        return;
+      }
+
+      event.preventDefault();
+      pendingHash = destination.hash;
+      router.push(destinationPath);
     };
 
     registerReveals();
 
     const mutationObserver = new MutationObserver(registerReveals);
     mutationObserver.observe(document.body, { childList: true, subtree: true });
+    document.addEventListener('click', handleHashClick);
 
     return () => {
       mutationObserver.disconnect();
       observer.disconnect();
+      document.removeEventListener('click', handleHashClick);
       root.classList.remove('reveal-ready');
     };
-  }, []);
+  }, [router]);
 
   return null;
 }
-
