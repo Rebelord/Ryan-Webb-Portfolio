@@ -221,16 +221,20 @@ h1 em, h2 em {
 }
 .product-visual {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-height: 480px;
   padding: clamp(22px, 3vw, 42px);
   overflow: hidden;
   background: #0b1934;
 }
 .product-visual img {
+  display: block;
   width: 100%;
-  height: 100%;
-  min-height: 390px;
-  object-fit: cover;
+  height: auto;
+  min-height: 0;
+  object-fit: contain;
   border: 1px solid rgba(255, 255, 255, 0.14);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
 }
@@ -876,7 +880,7 @@ h1 em, h2 em {
   .section-heading, .about-intro { margin-bottom: 52px; }
   .product-feature { padding: 32px 0 72px; }
   .product-visual { min-height: 300px; padding: 18px; }
-  .product-visual img { min-height: 280px; }
+  .product-visual img { min-height: 0; }
   .client-intro, .archive-intro { grid-template-columns: 1fr; padding-top: 72px; }
   .client-grid, .archive-grid { grid-template-columns: 1fr; }
   .client-card { min-height: 240px; }
