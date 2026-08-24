@@ -1,40 +1,36 @@
-const projects = [
-  {
-    number: '01',
-    title: 'ApplyKit',
-    category: 'macOS app · SwiftUI',
-    description:
-      'A private, local-first job application tracker with explainable role-fit scoring and a calm native interface.',
-    accent: 'project-blue',
-  },
-  {
-    number: '02',
-    title: 'Rebelord Media',
-    category: 'Independent practice · Digital',
-    description:
-      'An evolving creative practice for thoughtful brands, useful products, and experiments across the web.',
-    accent: 'project-lime',
-  },
-  {
-    number: '03',
-    title: 'Portfolio v1',
-    category: 'Web design · React',
-    description:
-      'A focused portfolio built from scratch to document the work, the thinking, and the progress behind it.',
-    accent: 'project-coral',
-  },
+import Image from 'next/image';
+
+const clientSites = [
+  { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/' },
+  { number: '02', title: 'Diversified Wealth Management', category: 'Wealth management', url: 'https://www.diversifiedwealthmanagement.com/' },
+  { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/' },
+  { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/' },
+  { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/' },
+  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/' },
+];
+
+const archiveDesigns = [
+  { title: 'OsteoStrong', image: '/projects/osteostrong.png', tone: 'archive-gold', width: 527, height: 1800 },
+  { title: 'Woof Houze', image: '/projects/woof-houze.png', tone: 'archive-red', width: 570, height: 1800 },
+  { title: 'All Season Adventures', image: '/projects/all-season-adventures.png', tone: 'archive-orange', width: 560, height: 1800 },
+  { title: 'EV Charging OC', image: '/projects/ev-charging-oc.png', tone: 'archive-blue', width: 606, height: 1800 },
 ];
 
 const experience = [
   {
-    period: 'Now',
-    title: 'Building in public',
-    detail: 'React, TypeScript, product design, and small useful tools.',
+    period: 'Current',
+    title: 'React & TypeScript development',
+    detail: 'Building this portfolio and practical digital products in public.',
   },
   {
-    period: 'Ongoing',
-    title: 'Independent creative work',
-    detail: 'Brand thinking, digital experiences, and visual communication.',
+    period: 'Product',
+    title: 'ApplyKit',
+    detail: 'Product design and SwiftUI development for a local-first macOS app.',
+  },
+  {
+    period: 'Client work',
+    title: 'FMG & WebDigital Inc.',
+    detail: 'Contributed to client website design and development across multiple industries.',
   },
 ];
 
@@ -69,7 +65,7 @@ export default function Home() {
       <section className="hero section-shell" id="top">
         <div className="hero-kicker">
           <span className="status-dot" />
-          Available for thoughtful work
+          Designer learning in public
         </div>
 
         <h1>
@@ -78,8 +74,8 @@ export default function Home() {
 
         <div className="hero-footer">
           <p>
-            Designer and emerging React developer focused on clear ideas,
-            useful products, and details that make the web feel human.
+            A multidisciplinary designer and emerging React developer turning
+            clear ideas into useful, memorable digital experiences.
           </p>
           <a className="circle-link" href="#work" aria-label="See selected work">
             <Arrow />
@@ -90,40 +86,116 @@ export default function Home() {
           <div className="object-label">DESIGN / CODE / CURIOSITY</div>
           <div className="object-orbit orbit-one" />
           <div className="object-orbit orbit-two" />
-          <div className="object-core">
-            <span>RW</span>
-          </div>
+          <div className="object-core"><span>RW</span></div>
         </div>
       </section>
 
       <section className="work section-shell" id="work">
         <div className="section-heading">
           <p className="eyebrow">Selected work</p>
-          <h2>A few things I&apos;ve been making.</h2>
-          <p className="section-count">(03 projects)</p>
+          <h2>Products, websites, and the thinking behind them.</h2>
+          <p className="section-count">(07 live projects)</p>
         </div>
 
-        <div className="project-list">
-          {projects.map((project) => (
-            <article className="project" key={project.title}>
-              <div className={`project-visual ${project.accent}`}>
-                <span className="project-number">{project.number}</span>
-                <div className="project-window">
-                  <div className="window-bar"><i /><i /><i /></div>
-                  <div className="window-content"><span /><span /><span /></div>
-                </div>
-                <div className="project-stamp">CASE STUDY</div>
-              </div>
+        <article className="product-feature">
+          <div className="product-visual">
+            <Image
+              src="/projects/applykit-overview.png"
+              alt="ApplyKit macOS job application tracker interface"
+              width={1600}
+              height={900}
+              priority
+              unoptimized
+            />
+            <span className="project-number">01 / Owned product</span>
+          </div>
 
-              <div className="project-copy">
-                <p className="project-category">{project.category}</p>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <a href="#contact" aria-label={`Ask Ryan about ${project.title}`}>
-                  View project <Arrow diagonal />
-                </a>
+          <div className="product-copy">
+            <p className="project-category">Product design · SwiftUI · macOS</p>
+            <h3>ApplyKit</h3>
+            <p className="product-lead">A calmer way to run a job search.</p>
+            <p>
+              A private, local-first application tracker designed and built to
+              save roles, understand fit, and keep every next step visible. The
+              product pairs a native macOS interface with explainable scoring
+              and a workflow built around real job-search decisions.
+            </p>
+            <ul className="project-tags" aria-label="ApplyKit capabilities">
+              <li>Product strategy</li>
+              <li>Interface design</li>
+              <li>SwiftUI development</li>
+            </ul>
+            <a href="#contact">
+              Ask about ApplyKit <Arrow diagonal />
+            </a>
+          </div>
+        </article>
+
+        <div className="client-intro">
+          <div>
+            <p className="eyebrow">Selected client websites</p>
+            <h3>Work made in collaboration.</h3>
+          </div>
+          <p>
+            I contributed to the design and development of these live client
+            websites while working with FMG and WebDigital Inc. The collection
+            spans financial services, wellness, home services, and regional
+            businesses.
+          </p>
+        </div>
+
+        <div className="client-grid">
+          {clientSites.map((site) => (
+            <a
+              className="client-card"
+              href={site.url}
+              key={site.title}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Visit ${site.title}`}
+            >
+              <span className="client-number">{site.number}</span>
+              <p>{site.category}</p>
+              <h4>{site.title}</h4>
+              <span className="client-link">View live site <Arrow diagonal /></span>
+            </a>
+          ))}
+        </div>
+
+        <div className="archive-intro">
+          <div>
+            <p className="eyebrow">From the design archive</p>
+            <h3>Full-page concepts, gathered in Figma.</h3>
+          </div>
+          <a
+            className="text-link archive-link"
+            href="https://www.figma.com/design/wIHXSvOkLPGf4rNSIkFKiu/Example-Designs?node-id=0-1"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open the Figma collection <Arrow diagonal />
+          </a>
+        </div>
+
+        <div className="archive-grid">
+          {archiveDesigns.map((design, index) => (
+            <figure className={`archive-card ${design.tone}`} key={design.title}>
+              <div className="archive-browser">
+                <div className="browser-bar" aria-hidden="true"><i /><i /><i /></div>
+                <Image
+                  src={design.image}
+                  alt={`${design.title} website design`}
+                  width={design.width}
+                  height={design.height}
+                  loading="lazy"
+                  unoptimized
+                />
               </div>
-            </article>
+              <figcaption>
+                <span>0{index + 1}</span>
+                <strong>{design.title}</strong>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </section>
@@ -142,14 +214,15 @@ export default function Home() {
 
           <div className="about-copy">
             <p className="about-lead">
-              I&apos;m Ryan—a multidisciplinary creative sharpening my skills in
-              React and TypeScript while making practical digital products.
+              I&apos;m Ryan—a multidisciplinary designer expanding into React and
+              TypeScript while building practical digital products.
             </p>
             <p>
-              My best work lives where design and development overlap: a strong
-              idea, a clean system, and enough personality to be remembered.
-              I care about craft, plain language, and leaving things better than
-              I found them.
+              My work lives where design and development overlap: understanding
+              the real problem, shaping a clear system, and giving the result
+              enough personality to be remembered. I bring client website
+              experience, hands-on product thinking, and a habit of learning by
+              making.
             </p>
 
             <div className="experience-list">
@@ -171,8 +244,13 @@ export default function Home() {
       <section className="contact section-shell" id="contact">
         <p className="eyebrow">Have a project in mind?</p>
         <h2>Let&apos;s make something <em>worth sharing.</em></h2>
-        <a className="contact-button" href="mailto:hello@ryanwebb.dev">
-          Start a conversation <Arrow diagonal />
+        <a
+          className="contact-button"
+          href="https://www.linkedin.com/in/ryandwebb"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Connect on LinkedIn <Arrow diagonal />
         </a>
       </section>
 
@@ -182,8 +260,8 @@ export default function Home() {
         </a>
         <p>Designing, building, and learning.</p>
         <div className="social-links">
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
-          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
+          <a href="https://www.linkedin.com/in/ryandwebb" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
+          <a href="#work">Selected work <Arrow diagonal /></a>
         </div>
         <p className="copyright">© {new Date().getFullYear()} Ryan Webb</p>
       </footer>

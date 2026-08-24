@@ -5,18 +5,18 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ryan-webb-portfolio.rwebb626.chatgpt.site'),
   title: 'Ryan Webb — Designer & Developer',
   description:
-    'Ryan Webb is a multidisciplinary creative learning React and building thoughtful digital products.',
+    'Ryan Webb is a multidisciplinary designer and developer creating digital products, client websites, and thoughtful React experiences.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Ryan Webb — Designer & Developer',
-    description: 'Thoughtful digital experiences, built with curiosity.',
+    description: 'Digital products, client websites, and thoughtful React experiences.',
     type: 'website',
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Ryan Webb — Designer & Developer' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ryan Webb — Designer & Developer',
-    description: 'Thoughtful digital experiences, built with curiosity.',
+    description: 'Digital products, client websites, and thoughtful React experiences.',
     images: ['/og.png'],
   },
 };
