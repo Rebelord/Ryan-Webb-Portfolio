@@ -467,7 +467,7 @@ h1 em, h2 em {
 }
 .archive-card figcaption strong { text-align: right; }
 
-/* The Chosen Quest case study */
+/* Project case studies */
 .case-study { overflow: hidden; }
 .case-hero { padding: clamp(72px, 9vw, 130px) 0 110px; }
 .case-label {
@@ -644,6 +644,52 @@ h1 em, h2 em {
 .roadmap-card h3 { margin: 18px 0 14px; font-size: clamp(28px, 3vw, 42px); letter-spacing: -0.04em; }
 .roadmap-card strong { display: inline-block; margin-top: 28px; padding: 9px 12px; border: 1px solid var(--ink); border-radius: 999px; font-size: 9px; letter-spacing: 0.1em; text-transform: uppercase; }
 
+/* ApplyKit case study */
+.case-study--applykit .case-label { background: #b9d3ff; }
+.case-study--applykit .case-hero h1 { color: #10264f; }
+.applykit-media { background: #0d1d3a; }
+.applykit-media img { background: #f4f6fb; }
+.goal-grid p strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.applykit-score-section { background: #10264f; }
+.score-breakdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 80px;
+  border-top: 1px solid rgba(250, 248, 242, 0.2);
+  border-left: 1px solid rgba(250, 248, 242, 0.2);
+}
+.score-breakdown div {
+  min-height: 170px;
+  padding: 24px;
+  border-right: 1px solid rgba(250, 248, 242, 0.2);
+  border-bottom: 1px solid rgba(250, 248, 242, 0.2);
+}
+.score-breakdown strong {
+  display: block;
+  color: var(--acid);
+  font-size: clamp(48px, 5vw, 74px);
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+.score-breakdown span {
+  display: block;
+  max-width: 160px;
+  margin-top: 44px;
+  color: rgba(250, 248, 242, 0.68);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.45;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.applykit-gallery figure { background: #0d1d3a; }
+
 .about-intro {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -810,7 +856,7 @@ h1 em, h2 em {
   .case-prose { margin-left: 0; }
   .decision-story, .decision-story--reverse { grid-template-columns: 1fr; }
   .decision-story--reverse .decision-copy, .decision-story--reverse .case-media { order: initial; }
-  .process-loop, .results-strip { grid-template-columns: repeat(2, 1fr); }
+  .process-loop, .results-strip, .score-breakdown { grid-template-columns: repeat(2, 1fr); }
   .results-strip div:nth-child(2) { border-right: 0; }
   .results-strip div:nth-child(-n + 2) { border-bottom: 1px solid rgba(23, 23, 20, 0.25); }
   .portrait-card { min-height: 440px; }
@@ -844,7 +890,7 @@ h1 em, h2 em {
   .case-meta div:first-child { border-top: 0; }
   .case-section { padding: 84px 0; }
   .case-section-title { margin-bottom: 48px; }
-  .case-prose, .goal-grid, .process-loop, .results-strip, .case-gallery { grid-template-columns: 1fr; }
+  .case-prose, .goal-grid, .process-loop, .results-strip, .case-gallery, .score-breakdown { grid-template-columns: 1fr; }
   .goal-grid li { min-height: 170px; }
   .goal-grid p { margin-top: 45px; }
   .process-loop li { min-height: 108px; }
@@ -852,6 +898,8 @@ h1 em, h2 em {
   .results-strip div { min-height: 170px; border-right: 0; border-bottom: 1px solid rgba(23, 23, 20, 0.25); }
   .results-strip div:last-child { border-bottom: 0; }
   .results-strip span { margin-top: 32px; }
+  .score-breakdown div { min-height: 145px; }
+  .score-breakdown span { margin-top: 28px; }
   .case-gallery .gallery-tall { grid-column: auto; }
   .roadmap-card { padding: 24px; }
   .portrait-card { min-height: 390px; }

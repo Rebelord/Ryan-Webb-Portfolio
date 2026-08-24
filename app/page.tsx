@@ -6,7 +6,7 @@ const clientSites = [
   { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/', image: '/projects/client-sites/bowen-financial-group.webp', alt: 'Family gathered together at home, imagery featured by Bowen Financial Group', width: 2000, height: 1132 },
   { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/', image: '/projects/client-sites/osteostrong-tustin.jpg', alt: 'OsteoStrong Tustin lobby and training space', width: 1920, height: 1440 },
   { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/', image: '/projects/client-sites/jaimes-plumbing.jpg', alt: 'Plumbing tools and fixtures featured by Jaime’s Plumbing', width: 1920, height: 1280 },
-  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/', image: '/projects/client-sites/water-of-texas.jpg', alt: 'Residential water-softening equipment installed by Water of Texas', width: 1280, height: 720 },
+  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/', image: '/projects/client-sites/water-of-texas.jpg', alt: 'Water of Texas technicians beside a residential water-treatment installation', width: 725, height: 408 },
 ];
 
 const archiveDesigns = [
@@ -125,8 +125,8 @@ export default function Home() {
               <li>Interface design</li>
               <li>SwiftUI development</li>
             </ul>
-            <a href="#contact">
-              Ask about ApplyKit <Arrow diagonal />
+            <a href="/work/applykit">
+              View the case study <Arrow diagonal />
             </a>
           </div>
         </article>
