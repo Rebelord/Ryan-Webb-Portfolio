@@ -65,7 +65,7 @@ export default function Home() {
       <section className="hero section-shell" id="top">
         <div className="hero-kicker">
           <span className="status-dot" />
-          Designer learning in public
+          Designing connections that work
         </div>
 
         <h1>
@@ -84,8 +84,14 @@ export default function Home() {
 
         <div className="hero-object" aria-hidden="true">
           <div className="object-label">DESIGN / CODE / CURIOSITY</div>
+          <div className="object-axis object-axis-x" />
+          <div className="object-axis object-axis-y" />
           <div className="object-orbit orbit-one" />
           <div className="object-orbit orbit-two" />
+          <div className="object-orbit orbit-three" />
+          <span className="object-node node-one" />
+          <span className="object-node node-two" />
+          <span className="object-node node-three" />
           <div className="object-core"><span>RW</span></div>
         </div>
       </section>
