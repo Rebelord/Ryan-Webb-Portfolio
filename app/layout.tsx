@@ -6,9 +6,9 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ?? 'https://ryandwebb.com',
   ),
-  title: 'Ryan Webb | Designer & Developer',
+  title: 'Ryan Webb | Design Engineer, Senior UX/UI Designer & Front-End Developer',
   description:
-    'Ryan Webb is a multidisciplinary designer and developer creating digital products, client websites, and thoughtful React experiences.',
+    'Design engineer and senior UX/UI designer building thoughtful, accessible digital products with React, TypeScript, and front-end code.',
   keywords: [
     'Design Engineer',
     'UX Engineer',
@@ -20,15 +20,15 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: '/' },
   openGraph: {
-    title: 'Ryan Webb | Designer & Developer',
-    description: 'Digital products, client websites, and thoughtful React experiences.',
+    title: 'Ryan Webb | Design Engineer, Senior UX/UI Designer & Front-End Developer',
+    description: 'Thoughtful, accessible digital products built across UX/UI design and front-end development.',
     type: 'website',
     images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Ryan Webb | Designer & Developer' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ryan Webb | Designer & Developer',
-    description: 'Digital products, client websites, and thoughtful React experiences.',
+    title: 'Ryan Webb | Design Engineer, Senior UX/UI Designer & Front-End Developer',
+    description: 'Thoughtful, accessible digital products built across UX/UI design and front-end development.',
     images: ['/og.png'],
   },
 };

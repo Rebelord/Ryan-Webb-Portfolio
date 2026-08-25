@@ -62,6 +62,51 @@ const experience = [
   },
 ];
 
+const homeStructuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Person',
+      '@id': 'https://ryandwebb.com/#person',
+      name: 'Ryan Webb',
+      url: 'https://ryandwebb.com/',
+      image: 'https://ryandwebb.com/og.png',
+      sameAs: [
+        'https://www.linkedin.com/in/ryandwebb',
+        'https://github.com/Rebelord',
+      ],
+      jobTitle: [
+        'Design Engineer',
+        'Senior UX/UI Designer',
+        'Front-End Developer focused on UI and design systems',
+      ],
+      knowsAbout: [
+        'Design engineering',
+        'UX/UI design',
+        'Product design',
+        'Front-end development',
+        'Design systems',
+        'Responsive web design',
+        'Accessibility',
+        'React',
+        'TypeScript',
+        'Prototyping',
+        'Information architecture',
+        'Conversion-focused design',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': 'https://ryandwebb.com/#website',
+      name: 'Ryan Webb Portfolio',
+      url: 'https://ryandwebb.com/',
+      description: 'Selected product, UX/UI design, and front-end development work by Ryan Webb.',
+      creator: { '@id': 'https://ryandwebb.com/#person' },
+      inLanguage: 'en-US',
+    },
+  ],
+};
+
 function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   return (
     <span aria-hidden="true" className={diagonal ? 'arrow diagonal' : 'arrow'}>
@@ -73,6 +118,12 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(homeStructuredData).replace(/</g, '\\u003c'),
+        }}
+      />
       <header className="site-header">
         <a className="brand" href="#top" aria-label="Ryan Webb, home">
           <span className="brand-mark">RW</span>
@@ -102,8 +153,8 @@ export default function Home() {
 
         <div className="hero-footer">
           <p>
-            A multidisciplinary designer actively building in React and turning
-            clear ideas into useful, memorable digital experiences.
+            Design engineer and senior UX/UI designer building thoughtful,
+            accessible digital products with React, TypeScript, and front-end code.
           </p>
           <a className="circle-link" href="#work" aria-label="See selected work">
             <Arrow />
@@ -121,6 +172,27 @@ export default function Home() {
           <span className="object-node node-two" />
           <span className="object-node node-three" />
           <div className="object-core"><span>RW</span></div>
+        </div>
+      </section>
+
+      <section className="practice section-shell" aria-labelledby="practice-title" data-reveal="section">
+        <div className="practice-heading">
+          <p className="eyebrow">What I do</p>
+          <h2 id="practice-title">Bridge design intent and working front-end experiences.</h2>
+        </div>
+        <div className="practice-list">
+          <article>
+            <h3>Design engineering</h3>
+            <p>I translate UX/UI and product design decisions into responsive, accessible interfaces using React, TypeScript, and front-end code.</p>
+          </article>
+          <article>
+            <h3>Systems and structure</h3>
+            <p>I create design systems, information architecture, and reusable patterns that keep products coherent from prototype through implementation.</p>
+          </article>
+          <article>
+            <h3>Conversion-focused web design</h3>
+            <p>I improve content hierarchy, interaction paths, and responsive behavior so digital experiences are clearer, more useful, and easier to act on.</p>
+          </article>
         </div>
       </section>
 
@@ -298,8 +370,8 @@ export default function Home() {
 
           <div className="about-copy">
             <p className="about-lead">
-              I&apos;m Ryan, a multidisciplinary designer expanding into React and
-              TypeScript while building practical digital products.
+              I&apos;m Ryan, a design engineer and senior UX/UI designer connecting
+              product thinking, design systems, and front-end implementation.
             </p>
             <p>
               My work lives where design and development overlap: understanding
@@ -318,13 +390,14 @@ export default function Home() {
               ))}
             </div>
 
-            <a
-              className="text-link"
-              href="/resume.pdf"
-              download="Ryan-Webb-Resume.pdf"
-            >
-              Download résumé <Arrow diagonal />
-            </a>
+            <div className="about-links">
+              <a className="text-link" href="/resume.pdf" target="_blank" rel="noreferrer">
+                View résumé <Arrow diagonal />
+              </a>
+              <a className="text-link" href="mailto:hello@ryandwebb.com?subject=Detailed%20r%C3%A9sum%C3%A9%20request">
+                Request detailed résumé <Arrow diagonal />
+              </a>
+            </div>
           </div>
         </div>
       </section>

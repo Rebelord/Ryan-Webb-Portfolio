@@ -46,9 +46,41 @@ const principles = [
   },
 ];
 
+const applyKitStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  '@id': 'https://ryandwebb.com/work/applykit/#software',
+  name: 'ApplyKit',
+  url: 'https://ryandwebb.com/work/applykit/',
+  description: 'A calm, local-first macOS application for tracking job applications, understanding role fit, and keeping next steps visible.',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'macOS',
+  softwareVersion: 'Working v1.0',
+  author: {
+    '@type': 'Person',
+    '@id': 'https://ryandwebb.com/#person',
+    name: 'Ryan Webb',
+    url: 'https://ryandwebb.com/',
+  },
+  image: 'https://ryandwebb.com/projects/applykit/product-overview.png',
+  featureList: [
+    'Local-first application tracking',
+    'Explainable role-fit scoring',
+    'Stage-aware interview workflows',
+    'CSV and TSV import',
+    'JSON backup and local data ownership',
+  ],
+};
+
 export default function ApplyKitCaseStudy() {
   return (
     <main className="case-study case-study--applykit">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(applyKitStructuredData).replace(/</g, '\\u003c'),
+        }}
+      />
       <header className="site-header">
         <Link className="brand" href="/" aria-label="Ryan Webb, home">
           <span className="brand-mark">RW</span>
@@ -81,11 +113,11 @@ export default function ApplyKitCaseStudy() {
             </p>
           </div>
 
-          <dl className="case-meta">
-            <div><dt>Role</dt><dd>Product strategy, UI/UX design, SwiftUI development, workflow design &amp; QA</dd></div>
-            <div><dt>Product</dt><dd>Job-search decision support</dd></div>
-            <div><dt>Platform</dt><dd>Native macOS · SwiftUI</dd></div>
-            <div><dt>Status</dt><dd>Working independent product</dd></div>
+          <dl className="case-meta case-meta--balanced">
+            <div><dt>Role &amp; responsibilities</dt><dd>Independent product designer and developer · Strategy, UI/UX, SwiftUI implementation, workflow design &amp; QA</dd></div>
+            <div><dt>Timeline &amp; status</dt><dd>2026 · Working v1.0 · Active independent product</dd></div>
+            <div><dt>Platform &amp; tools</dt><dd>Native macOS · SwiftUI · Figma · local Codable JSON</dd></div>
+            <div><dt>Constraints &amp; validation</dt><dd>Private local data · Explainable scoring · Core tracker, imports, reminders, and stage-aware workflows implemented</dd></div>
           </dl>
 
           <figure className="case-hero-media applykit-media">
