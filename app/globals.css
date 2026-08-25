@@ -184,11 +184,36 @@ h1 em, h2 em {
   transition: background 180ms ease, color 180ms ease;
 }
 .circle-link .arrow {
+  position: relative;
+  width: 18px;
+  height: 18px;
   margin-left: 0;
-  line-height: 1;
-  transform: rotate(90deg);
+  font-size: 0;
+  transform: none;
 }
-.circle-link:hover .arrow { transform: rotate(90deg) translateX(4px); }
+.circle-link .arrow::before {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  width: 1px;
+  height: 12px;
+  background: currentColor;
+  content: '';
+  transform: translateX(-50%);
+}
+.circle-link .arrow::after {
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  width: 7px;
+  height: 7px;
+  border-right: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  content: '';
+  transform: translateX(-50%) rotate(45deg);
+  transform-origin: center;
+}
+.circle-link:hover .arrow { transform: translateY(4px); }
 .circle-link:hover { background: var(--ink); color: var(--paper); }
 
 .hero-object {
