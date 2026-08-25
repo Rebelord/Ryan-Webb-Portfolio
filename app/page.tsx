@@ -42,6 +42,20 @@ function Arrow({ diagonal = false }: { diagonal?: boolean }) {
   );
 }
 
+function HeroMonogram() {
+  return (
+    <svg
+      aria-hidden="true"
+      className="hero-monogram"
+      viewBox="0 0 120 88"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <text className="hero-monogram-r" x="8" y="62">R</text>
+      <text className="hero-monogram-w" x="43" y="73">W</text>
+    </svg>
+  );
+}
+
 export default function Home() {
   return (
     <main>
@@ -86,7 +100,7 @@ export default function Home() {
           <div className="object-label">DESIGN / CODE / CURIOSITY</div>
           <div className="object-orbit orbit-one" />
           <div className="object-orbit orbit-two" />
-          <div className="object-core"><span>RW</span></div>
+          <div className="object-core"><HeroMonogram /></div>
         </div>
       </section>
 
