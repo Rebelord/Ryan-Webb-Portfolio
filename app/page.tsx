@@ -425,7 +425,7 @@ export default function Home() {
         <div className="social-links">
           <a href="mailto:hello@ryandwebb.com">Email <Arrow diagonal /></a>
           <a href="https://www.linkedin.com/in/ryandwebb" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
-          <a href="https://github.com/Rebelord/Ryan-Webb-Portfolio" target="_blank" rel="noreferrer">Site code <Arrow diagonal /></a>
+          <a href="https://github.com/Rebelord" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
         </div>
         <p className="copyright">© {new Date().getFullYear()} Ryan Webb</p>
       </footer>
