@@ -80,6 +80,7 @@ a { color: inherit; text-decoration: none; }
   display: inline-flex;
   align-items: center;
   gap: 12px;
+  min-height: 44px;
   width: max-content;
 }
 
@@ -96,6 +97,11 @@ a { color: inherit; text-decoration: none; }
 }
 
 .site-header nav { display: flex; align-items: center; gap: 34px; }
+.site-header nav a, .header-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 .site-header nav a, .header-link, .social-links a { position: relative; }
 .site-header nav a::after, .social-links a::after {
   content: '';
