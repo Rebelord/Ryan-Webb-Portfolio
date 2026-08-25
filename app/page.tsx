@@ -329,8 +329,8 @@ export default function Home() {
         <p className="eyebrow">Have a project in mind?</p>
         <h2>Let&apos;s make something <em>worth sharing.</em></h2>
         <p className="contact-availability">
-          Currently open to full-time roles in design engineering, senior UX
-          design, and front-end development.
+          Open to full-time roles bridging UX/UI design and front-end
+          development.
         </p>
         <a
           className="contact-button"

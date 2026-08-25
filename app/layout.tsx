@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: 'Ryan Webb | Designer & Developer',
   description:
     'Ryan Webb is a multidisciplinary designer and developer creating digital products, client websites, and thoughtful React experiences.',
+  keywords: [
+    'Design Engineer',
+    'UX Engineer',
+    'Senior UX/UI Designer',
+    'Senior UX Designer',
+    'Product Design Engineer',
+    'Design Technologist',
+    'Front-End Developer focused on UI and design systems',
+  ],
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Ryan Webb | Designer & Developer',
