@@ -6,10 +6,12 @@ export const metadata: Metadata = {
   title: 'The Chosen Quest Case Study | Ryan Webb',
   description:
     'How Ryan Webb rebuilt a classroom RPG into a cohesive desktop experience through product direction, interface systems, testing, and accountable AI-assisted development.',
+  alternates: { canonical: '/work/the-chosen-quest/' },
   openGraph: {
     title: 'The Chosen Quest Case Study | Ryan Webb',
     description:
       'A human-directed, AI-assisted redesign spanning gameplay systems, interface design, testing, and release preparation.',
+    url: '/work/the-chosen-quest/',
     images: ['/projects/the-chosen-quest/title-screen.png'],
   },
   twitter: {

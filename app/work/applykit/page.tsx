@@ -6,10 +6,12 @@ export const metadata: Metadata = {
   title: 'ApplyKit Case Study | Ryan Webb',
   description:
     'How Ryan Webb designed and built a calm, local-first macOS workflow for tracking applications, understanding fit, and keeping next steps visible.',
+  alternates: { canonical: '/work/applykit/' },
   openGraph: {
     title: 'ApplyKit Case Study | Ryan Webb',
     description:
       'A native macOS product built around calm workflow, explainable scoring, and local data ownership.',
+    url: '/work/applykit/',
     images: ['/projects/applykit/product-overview.png'],
   },
   twitter: {
@@ -113,7 +115,7 @@ export default function ApplyKitCaseStudy() {
             <p>
               ApplyKit brings saved roles, application state, descriptions, fit
               evidence, notes, follow-ups, and interview details into one native
-              desktop workspace—without making a hosted account the center of the experience.
+              desktop workspace, without making a hosted account the center of the experience.
             </p>
           </div>
           <ol className="goal-grid">
@@ -226,7 +228,7 @@ export default function ApplyKitCaseStudy() {
             <p>
               Manual and URL-based entry support new roles. CSV and TSV import,
               duplicate handling, bulk status changes, CSV export, and JSON backup
-              help an existing search move in—and let the data move back out.
+              help an existing search move in, and let the data move back out.
             </p>
           </div>
           <div className="case-gallery applykit-gallery" data-reveal="stagger">

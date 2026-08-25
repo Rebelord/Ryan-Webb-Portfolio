@@ -125,7 +125,7 @@ export default function Home() {
               <li>Interface design</li>
               <li>SwiftUI development</li>
             </ul>
-            <a href="/work/applykit">
+            <a href="/work/applykit/">
               View the case study <Arrow diagonal />
             </a>
           </div>
@@ -148,7 +148,7 @@ export default function Home() {
               <li>Interface systems</li>
               <li>AI workflow direction</li>
             </ul>
-            <a href="/work/the-chosen-quest">
+            <a href="/work/the-chosen-quest/">
               View the case study <Arrow diagonal />
             </a>
           </div>
@@ -261,7 +261,7 @@ export default function Home() {
 
           <div className="about-copy">
             <p className="about-lead">
-              I&apos;m Ryan—a multidisciplinary designer expanding into React and
+              I&apos;m Ryan, a multidisciplinary designer expanding into React and
               TypeScript while building practical digital products.
             </p>
             <p>
@@ -293,11 +293,9 @@ export default function Home() {
         <h2>Let&apos;s make something <em>worth sharing.</em></h2>
         <a
           className="contact-button"
-          href="https://www.linkedin.com/in/ryandwebb"
-          target="_blank"
-          rel="noreferrer"
+          href="mailto:hello@ryandwebb.com"
         >
-          Connect on LinkedIn <Arrow diagonal />
+          Email Ryan <Arrow diagonal />
         </a>
       </section>
 
@@ -307,6 +305,7 @@ export default function Home() {
         </a>
         <p>Designing, building, and learning.</p>
         <div className="social-links">
+          <a href="mailto:hello@ryandwebb.com">Email <Arrow diagonal /></a>
           <a href="https://www.linkedin.com/in/ryandwebb" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
           <a href="#work">Selected work <Arrow diagonal /></a>
         </div>
