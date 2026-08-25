@@ -1,16 +1,14 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function RevealOnScroll() {
-  const router = useRouter();
-
   useEffect(() => {
     const root = document.documentElement;
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const observed = new WeakSet<Element>();
-    let pendingHash = '';
+    let pendingHash = window.sessionStorage.getItem('portfolio-pending-hash') ?? '';
+    window.sessionStorage.removeItem('portfolio-pending-hash');
 
     const scrollToHash = (hash: string) => {
       const id = decodeURIComponent(hash.replace(/^#/, ''));
@@ -88,23 +86,23 @@ export default function RevealOnScroll() {
       }
 
       event.preventDefault();
-      pendingHash = destination.hash;
-      router.push(destinationPath);
+      window.sessionStorage.setItem('portfolio-pending-hash', destination.hash);
+      window.location.assign(destinationPath);
     };
 
     registerReveals();
 
     const mutationObserver = new MutationObserver(registerReveals);
     mutationObserver.observe(document.body, { childList: true, subtree: true });
-    document.addEventListener('click', handleHashClick);
+    document.addEventListener('click', handleHashClick, true);
 
     return () => {
       mutationObserver.disconnect();
       observer.disconnect();
-      document.removeEventListener('click', handleHashClick);
+      document.removeEventListener('click', handleHashClick, true);
       root.classList.remove('reveal-ready');
     };
-  }, [router]);
+  }, []);
 
   return null;
 }

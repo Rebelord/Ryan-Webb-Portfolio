@@ -347,6 +347,7 @@ h1 em, h2 em {
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
+.text-link { display: inline-flex; align-items: center; }
 
 .client-intro, .archive-intro {
   display: grid;
