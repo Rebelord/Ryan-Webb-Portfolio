@@ -10,10 +10,38 @@ const clientSites = [
 ];
 
 const archiveDesigns = [
-  { title: 'OsteoStrong', image: '/projects/osteostrong.png', tone: 'archive-gold', width: 527, height: 1800 },
-  { title: 'Woof Houze', image: '/projects/woof-houze.png', tone: 'archive-red', width: 570, height: 1800 },
-  { title: 'All Season Adventures', image: '/projects/all-season-adventures.png', tone: 'archive-orange', width: 560, height: 1800 },
-  { title: 'EV Charging OC', image: '/projects/ev-charging-oc.png', tone: 'archive-blue', width: 606, height: 1800 },
+  {
+    title: 'OsteoStrong',
+    description: 'A local studio concept designed to explain unfamiliar bone-strengthening modalities and encourage visitors to book a free session.',
+    image: '/projects/osteostrong.png',
+    tone: 'archive-gold',
+    width: 527,
+    height: 1800,
+  },
+  {
+    title: 'Woof Houze',
+    description: 'A friendly service-site concept for a humane, fear-free canine training and wellness business.',
+    image: '/projects/woof-houze.png',
+    tone: 'archive-red',
+    width: 570,
+    height: 1800,
+  },
+  {
+    title: 'All Season Adventures',
+    description: 'An energetic booking concept for Colorado ATV, UTV, and snowmobile rentals and guided tours.',
+    image: '/projects/all-season-adventures.png',
+    tone: 'archive-orange',
+    width: 560,
+    height: 1800,
+  },
+  {
+    title: 'EV Charging OC',
+    description: 'A local-service concept designed to build trust and generate estimates for residential EV charger installation in Orange County.',
+    image: '/projects/ev-charging-oc.png',
+    tone: 'archive-blue',
+    width: 606,
+    height: 1800,
+  },
 ];
 
 const experience = [
@@ -74,7 +102,7 @@ export default function Home() {
 
         <div className="hero-footer">
           <p>
-            A multidisciplinary designer and emerging React developer turning
+            A multidisciplinary designer actively building in React and turning
             clear ideas into useful, memorable digital experiences.
           </p>
           <a className="circle-link" href="#work" aria-label="See selected work">
@@ -245,8 +273,11 @@ export default function Home() {
                 />
               </div>
               <figcaption>
-                <span>0{index + 1}</span>
-                <strong>{design.title}</strong>
+                <div className="archive-card-heading">
+                  <span>0{index + 1}</span>
+                  <strong>{design.title}</strong>
+                </div>
+                <p>{design.description}</p>
               </figcaption>
             </figure>
           ))}
@@ -297,6 +328,10 @@ export default function Home() {
       <section className="contact section-shell" id="contact" data-reveal="section">
         <p className="eyebrow">Have a project in mind?</p>
         <h2>Let&apos;s make something <em>worth sharing.</em></h2>
+        <p className="contact-availability">
+          Currently open to full-time roles in design engineering, senior UX
+          design, and front-end development.
+        </p>
         <a
           className="contact-button"
           href="mailto:hello@ryandwebb.com"
@@ -313,7 +348,7 @@ export default function Home() {
         <div className="social-links">
           <a href="mailto:hello@ryandwebb.com">Email <Arrow diagonal /></a>
           <a href="https://www.linkedin.com/in/ryandwebb" target="_blank" rel="noreferrer">LinkedIn <Arrow diagonal /></a>
-          <a href="#work">Selected work <Arrow diagonal /></a>
+          <a href="https://github.com/Rebelord" target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a>
         </div>
         <p className="copyright">© {new Date().getFullYear()} Ryan Webb</p>
       </footer>
