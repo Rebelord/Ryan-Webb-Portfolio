@@ -181,9 +181,14 @@ h1 em, h2 em {
   border: 1px solid var(--ink);
   border-radius: 50%;
   font-size: 24px;
-  transform: rotate(90deg);
   transition: background 180ms ease, color 180ms ease;
 }
+.circle-link .arrow {
+  margin-left: 0;
+  line-height: 1;
+  transform: rotate(90deg);
+}
+.circle-link:hover .arrow { transform: rotate(90deg) translateX(4px); }
 .circle-link:hover { background: var(--ink); color: var(--paper); }
 
 .hero-object {
