@@ -978,7 +978,7 @@ h1 em, h2 em {
   .section-shell, .site-header { width: min(100% - 32px, 1280px); }
   .site-header { height: 74px; }
   .brand > span:last-child { display: none; }
-  .hero { padding-top: 56px; padding-bottom: 345px; }
+  .hero { padding-top: 56px; padding-bottom: 420px; }
   .hero h1 { margin-top: 30px; font-size: clamp(50px, 15vw, 75px); line-height: 0.92; }
   .hero-footer { align-items: flex-start; gap: 24px; }
   .circle-link { width: 52px; }
