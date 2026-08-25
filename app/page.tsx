@@ -318,8 +318,12 @@ export default function Home() {
               ))}
             </div>
 
-            <a className="text-link" href="#contact">
-              Request full résumé <Arrow diagonal />
+            <a
+              className="text-link"
+              href="/resume.pdf"
+              download="Ryan-Webb-Resume.pdf"
+            >
+              Download résumé <Arrow diagonal />
             </a>
           </div>
         </div>

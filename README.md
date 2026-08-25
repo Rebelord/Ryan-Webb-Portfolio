@@ -9,7 +9,7 @@ provider that serves HTML, CSS, and JavaScript.
 - Replace the generic LinkedIn and GitHub URLs in `app/page.tsx` with profile URLs.
 - Configure `hello@ryandwebb.com` as a Porkbun mailbox or email forward.
 - Replace the Rebelord Media and Portfolio v1 descriptions with final case-study copy and destination URLs.
-- Add a real résumé PDF to `public/resume.pdf`, then change the résumé link back to `/resume.pdf`.
+- Replace `public/resume.pdf` whenever the public résumé is updated.
 
 ## Local development
 
