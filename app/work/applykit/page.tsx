@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description:
       'A native macOS product built around calm workflow, explainable scoring, and local data ownership.',
     url: '/work/applykit/',
-    images: ['/projects/applykit/product-overview.png'],
+    images: ['/projects/applykit/product-overview.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'ApplyKit Case Study | Ryan Webb',
     description:
       'A native macOS product built around calm workflow, explainable scoring, and local data ownership.',
-    images: ['/projects/applykit/product-overview.png'],
+    images: ['/projects/applykit/product-overview.webp'],
   },
 };
 
@@ -62,7 +62,7 @@ const applyKitStructuredData = {
     name: 'Ryan Webb',
     url: 'https://ryandwebb.com/',
   },
-  image: 'https://ryandwebb.com/projects/applykit/product-overview.png',
+  image: 'https://ryandwebb.com/projects/applykit/product-overview.webp',
   featureList: [
     'Local-first application tracking',
     'Explainable role-fit scoring',
@@ -122,7 +122,7 @@ export default function ApplyKitCaseStudy() {
 
           <figure className="case-hero-media applykit-media">
             <Image
-              src="/projects/applykit/main-window.png"
+              src="/projects/applykit/main-window.webp"
               alt="ApplyKit macOS workspace with status navigation, demonstration job applications, and a selected role’s details and fit score"
               width={1091}
               height={1328}
@@ -205,7 +205,7 @@ export default function ApplyKitCaseStudy() {
           </div>
           <figure className="case-media applykit-media">
             <Image
-              src="/projects/applykit/search-profile.png"
+              src="/projects/applykit/search-profile.webp"
               alt="ApplyKit Search Profile reference with target titles, required skills, preferred skills, avoided terms, salary, location, and remote preference"
               width={1119}
               height={1328}
@@ -241,7 +241,7 @@ export default function ApplyKitCaseStudy() {
           </div>
           <figure className="case-media applykit-media">
             <Image
-              src="/projects/applykit/interview-detail.png"
+              src="/projects/applykit/interview-detail.webp"
               alt="ApplyKit job detail reference showing an Interview status with round, date, interviewers, type, and preparation notes using demonstration data"
               width={1091}
               height={1328}
@@ -265,15 +265,15 @@ export default function ApplyKitCaseStudy() {
           </div>
           <div className="case-gallery applykit-gallery" data-reveal="stagger">
             <figure>
-              <Image src="/projects/applykit/add-job.png" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1119} height={1328} unoptimized />
+              <Image src="/projects/applykit/add-job.webp" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1119} height={1328} unoptimized />
               <figcaption>Focused entry supports manual details alongside URL-based draft import.</figcaption>
             </figure>
             <figure>
-              <Image src="/projects/applykit/bulk-selection.png" alt="ApplyKit job list reference in bulk-selection mode with several demonstration roles selected" width={1091} height={800} unoptimized />
+              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit job list reference in bulk-selection mode with several demonstration roles selected" width={1091} height={800} unoptimized />
               <figcaption>Bulk selection supports status changes and deletion across multiple records.</figcaption>
             </figure>
             <figure className="gallery-tall">
-              <Image src="/projects/applykit/settings.png" alt="ApplyKit Settings reference showing export, backup, import, reminder, and local-storage information" width={1091} height={900} unoptimized />
+              <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, and local-storage information" width={1091} height={900} unoptimized />
               <figcaption>Data controls make backup, migration, reminders, and local storage visible.</figcaption>
             </figure>
           </div>

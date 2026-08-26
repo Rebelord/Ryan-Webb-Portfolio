@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     title: 'Ryan Webb | Design Engineer, Senior UX/UI Designer & Front-End Developer',
     description: 'Thoughtful, accessible digital products built across UX/UI design and front-end development.',
     type: 'website',
-    images: [{ url: '/og.png', width: 1200, height: 630, alt: 'Ryan Webb | Designer & Developer' }],
+    images: [{ url: '/og.jpg', width: 1200, height: 630, alt: 'Ryan Webb | Designer & Developer' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ryan Webb | Design Engineer, Senior UX/UI Designer & Front-End Developer',
     description: 'Thoughtful, accessible digital products built across UX/UI design and front-end development.',
-    images: ['/og.png'],
+    images: ['/og.jpg'],
   },
 };
 

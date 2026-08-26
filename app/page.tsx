@@ -1,19 +1,19 @@
 import Image from 'next/image';
 
 const clientSites = [
-  { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/', image: '/projects/client-sites/keim-financial-group.jpg', alt: 'Sailboat crossing bright blue water, imagery featured by Keim Financial Group', width: 2092, height: 675 },
-  { number: '02', title: 'Diversified Wealth Management', category: 'Wealth management', url: 'https://www.diversifiedwealthmanagement.com/', image: '/projects/client-sites/diversified-wealth-management.jpg', alt: 'Autumn shoreline and lake landscape featured by Diversified Wealth Management', width: 2000, height: 1335 },
-  { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/', image: '/projects/client-sites/bowen-financial-group.webp', alt: 'Family gathered together at home, imagery featured by Bowen Financial Group', width: 2000, height: 1132 },
-  { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/', image: '/projects/client-sites/osteostrong-tustin.jpg', alt: 'OsteoStrong Tustin lobby and training space', width: 1920, height: 1440 },
-  { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/', image: '/projects/client-sites/jaimes-plumbing.jpg', alt: 'Plumbing tools and fixtures featured by Jaime’s Plumbing', width: 1920, height: 1280 },
-  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/', image: '/projects/client-sites/water-of-texas.jpg', alt: 'Water of Texas technicians beside a residential water-treatment installation', width: 725, height: 408 },
+  { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/', image: '/projects/client-sites/keim-financial-group.webp', alt: 'Sailboat crossing bright blue water, imagery featured by Keim Financial Group', width: 1200, height: 387 },
+  { number: '02', title: 'Diversified Wealth Management', category: 'Wealth management', url: 'https://www.diversifiedwealthmanagement.com/', image: '/projects/client-sites/diversified-wealth-management.webp', alt: 'Autumn shoreline and lake landscape featured by Diversified Wealth Management', width: 1200, height: 801 },
+  { number: '03', title: 'Bowen Financial Group', category: 'Financial services', url: 'https://www.bowenfg.com/', image: '/projects/client-sites/bowen-financial-group.webp', alt: 'Family gathered together at home, imagery featured by Bowen Financial Group', width: 1200, height: 679 },
+  { number: '04', title: 'OsteoStrong Tustin', category: 'Health & wellness', url: 'https://osteostrongtustin.com/', image: '/projects/client-sites/osteostrong-tustin.webp', alt: 'OsteoStrong Tustin lobby and training space', width: 1200, height: 900 },
+  { number: '05', title: 'Jaime’s Plumbing', category: 'Home services', url: 'https://jaimesplumbingpro.com/', image: '/projects/client-sites/jaimes-plumbing.webp', alt: 'Plumbing tools and fixtures featured by Jaime’s Plumbing', width: 1200, height: 800 },
+  { number: '06', title: 'Water of Texas', category: 'Water systems', url: 'https://wateroftexas.com/', image: '/projects/client-sites/water-of-texas.webp', alt: 'Water of Texas technicians beside a residential water-treatment installation', width: 725, height: 408 },
 ];
 
 const archiveDesigns = [
   {
     title: 'OsteoStrong',
     description: 'A local studio concept designed to explain unfamiliar bone-strengthening modalities and encourage visitors to book a free session.',
-    image: '/projects/osteostrong.png',
+    image: '/projects/osteostrong.webp',
     tone: 'archive-gold',
     width: 527,
     height: 1800,
@@ -21,7 +21,7 @@ const archiveDesigns = [
   {
     title: 'Woof Houze',
     description: 'A friendly service-site concept for a humane, fear-free canine training and wellness business.',
-    image: '/projects/woof-houze.png',
+    image: '/projects/woof-houze.webp',
     tone: 'archive-red',
     width: 570,
     height: 1800,
@@ -29,7 +29,7 @@ const archiveDesigns = [
   {
     title: 'All Season Adventures',
     description: 'An energetic booking concept for Colorado ATV, UTV, and snowmobile rentals and guided tours.',
-    image: '/projects/all-season-adventures.png',
+    image: '/projects/all-season-adventures.webp',
     tone: 'archive-orange',
     width: 560,
     height: 1800,
@@ -37,7 +37,7 @@ const archiveDesigns = [
   {
     title: 'EV Charging OC',
     description: 'A local-service concept designed to build trust and generate estimates for residential EV charger installation in Orange County.',
-    image: '/projects/ev-charging-oc.png',
+    image: '/projects/ev-charging-oc.webp',
     tone: 'archive-blue',
     width: 606,
     height: 1800,
@@ -70,7 +70,7 @@ const homeStructuredData = {
       '@id': 'https://ryandwebb.com/#person',
       name: 'Ryan Webb',
       url: 'https://ryandwebb.com/',
-      image: 'https://ryandwebb.com/og.png',
+      image: 'https://ryandwebb.com/og.jpg',
       sameAs: [
         'https://www.linkedin.com/in/ryandwebb',
         'https://github.com/Rebelord',
@@ -125,7 +125,7 @@ export default function Home() {
         }}
       />
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Ryan Webb, home">
+        <a className="brand" href="#top" aria-label="RW, Ryan Webb, home">
           <span className="brand-mark">RW</span>
           <span>Ryan Webb</span>
         </a>
@@ -206,11 +206,11 @@ export default function Home() {
         <article className="product-feature" data-reveal="section">
           <div className="product-visual">
             <Image
-              src="/projects/applykit-overview.png"
+              src="/projects/applykit-overview.webp"
               alt="ApplyKit macOS job application tracker interface"
-              width={1600}
-              height={900}
-              priority
+              width={800}
+              height={450}
+              loading="lazy"
               unoptimized
             />
             <span className="project-number">01 / Owned product</span>
@@ -261,10 +261,10 @@ export default function Home() {
 
           <div className="product-visual product-visual--quest">
             <Image
-              src="/projects/the-chosen-quest/character-creation.png"
+              src="/projects/the-chosen-quest/character-creation-home.webp"
               alt="The Chosen Quest character creation interface showing race, class, Combat Path, portrait, statistics, and equipment choices"
-              width={1440}
-              height={900}
+              width={800}
+              height={500}
               loading="lazy"
               unoptimized
             />

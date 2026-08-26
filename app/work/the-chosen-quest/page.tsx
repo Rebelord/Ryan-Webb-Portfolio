@@ -12,14 +12,14 @@ export const metadata: Metadata = {
     description:
       'A human-directed, AI-assisted redesign spanning gameplay systems, interface design, testing, and release preparation.',
     url: '/work/the-chosen-quest/',
-    images: ['/projects/the-chosen-quest/title-screen.png'],
+    images: ['/projects/the-chosen-quest/title-screen.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'The Chosen Quest Case Study | Ryan Webb',
     description:
       'A human-directed, AI-assisted redesign spanning gameplay systems, interface design, testing, and release preparation.',
-    images: ['/projects/the-chosen-quest/title-screen.png'],
+    images: ['/projects/the-chosen-quest/title-screen.webp'],
   },
 };
 
@@ -92,7 +92,7 @@ export default function TheChosenQuestCaseStudy() {
 
           <figure className="case-hero-media">
             <Image
-              src="/projects/the-chosen-quest/title-screen.png"
+              src="/projects/the-chosen-quest/title-screen.webp"
               alt="The Chosen Quest title over a dark fantasy mountain valley with new quest and load quest controls"
               width={1440}
               height={900}
@@ -176,7 +176,7 @@ export default function TheChosenQuestCaseStudy() {
           </div>
           <figure className="case-media">
             <Image
-              src="/projects/the-chosen-quest/character-creation.png"
+              src="/projects/the-chosen-quest/character-creation.webp"
               alt="Character creation interface showing race and class choices, Combat Paths, portrait, meters, statistics, and equipment"
               width={1440}
               height={900}
@@ -214,7 +214,7 @@ export default function TheChosenQuestCaseStudy() {
           </div>
           <figure className="case-media">
             <Image
-              src="/projects/the-chosen-quest/rogue-combat-path-concept.png"
+              src="/projects/the-chosen-quest/rogue-combat-path-concept.webp"
               alt="Art Deco concept comparing Rogue Assassin and Skirmisher combat paths through equipment, action loops, strengths, and tradeoffs"
               width={1672}
               height={941}
@@ -244,7 +244,7 @@ export default function TheChosenQuestCaseStudy() {
           </div>
           <figure className="qa-media">
             <Image
-              src="/projects/the-chosen-quest/button-states.png"
+              src="/projects/the-chosen-quest/button-states.webp"
               alt="Rendered matrix of fantasy interface button states used for visual quality checks"
               width={900}
               height={390}
@@ -268,15 +268,15 @@ export default function TheChosenQuestCaseStudy() {
           </div>
           <div className="case-gallery" data-reveal="stagger">
             <figure className="gallery-wide">
-              <Image src="/projects/the-chosen-quest/exploration.png" alt="Fantasy RPG exploration interface with hero state, illustrated location, travel actions, and world map" width={1440} height={900} unoptimized />
+              <Image src="/projects/the-chosen-quest/exploration.webp" alt="Fantasy RPG exploration interface with hero state, illustrated location, travel actions, and world map" width={1440} height={900} unoptimized />
               <figcaption>Exploration keeps hero state, location context, actions, and map information visible together.</figcaption>
             </figure>
             <figure className="gallery-wide">
-              <Image src="/projects/the-chosen-quest/combat.png" alt="Combat interface featuring a shadow dragon, enemy information, player actions, battle log, hero rail, and map" width={1440} height={900} unoptimized />
+              <Image src="/projects/the-chosen-quest/combat.webp" alt="Combat interface featuring a shadow dragon, enemy information, player actions, battle log, hero rail, and map" width={1440} height={900} unoptimized />
               <figcaption>Combat combines illustrated encounters with readable threat, resource, action, and battle-log information.</figcaption>
             </figure>
             <figure className="gallery-tall">
-              <Image src="/projects/the-chosen-quest/inventory.png" alt="Dark fantasy inventory listing equipment with path, style, gold, relic, and return controls" width={760} height={720} unoptimized />
+              <Image src="/projects/the-chosen-quest/inventory.webp" alt="Dark fantasy inventory listing equipment with path, style, gold, relic, and return controls" width={760} height={720} unoptimized />
               <figcaption>Inventory exposes origin path, current style, equipment state, relics, and actionable gear information.</figcaption>
             </figure>
           </div>

@@ -84,7 +84,7 @@ export default function AnalyticsConsent() {
             <p>
               I use Microsoft Clarity to understand how visitors navigate this
               portfolio and improve the experience. You can continue without
-              analytics. <Link href="/privacy/">Privacy details</Link>
+              analytics. <Link href="/privacy/" prefetch={false}>Privacy details</Link>
             </p>
           </div>
           <div className="analytics-consent-actions">
