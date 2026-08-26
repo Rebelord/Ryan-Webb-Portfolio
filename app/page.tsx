@@ -261,7 +261,7 @@ export default function Home() {
 
           <div className="product-visual product-visual--quest">
             <Image
-              src="/projects/the-chosen-quest/character-creation-home.webp"
+              src="/projects/the-chosen-quest/character-creation.webp"
               alt="The Chosen Quest character creation interface showing race, class, Combat Path, portrait, statistics, and equipment choices"
               width={800}
               height={500}
