@@ -21,6 +21,146 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.analytics-consent {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 32px;
+  max-width: 1232px;
+  margin-inline: auto;
+  padding: 24px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: var(--paper-light);
+  box-shadow: 0 18px 48px rgba(23, 23, 20, 0.2);
+}
+.analytics-consent-copy { max-width: 720px; }
+.analytics-consent-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  color: var(--paper-light);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.analytics-consent-label::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--acid);
+  content: '';
+}
+.analytics-consent-copy > p:last-child {
+  margin: 0;
+  color: rgba(250, 248, 242, 0.72);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.analytics-consent-copy a {
+  color: var(--paper-light);
+  text-decoration: underline;
+  text-decoration-color: rgba(250, 248, 242, 0.42);
+  text-underline-offset: 3px;
+}
+.analytics-consent-actions { display: flex; gap: 10px; }
+.analytics-consent-actions button {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1px solid var(--paper-light);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--paper-light);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.analytics-consent-actions button:hover,
+.analytics-consent-actions button:focus-visible {
+  border-color: var(--acid);
+  outline: none;
+}
+.analytics-consent-actions .analytics-consent-allow {
+  border-color: var(--acid);
+  background: var(--acid);
+  color: var(--ink);
+}
+.analytics-preferences-trigger {
+  position: fixed;
+  bottom: 12px;
+  left: 12px;
+  z-index: 900;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+}
+.analytics-preferences-trigger:hover,
+.analytics-preferences-trigger:focus-visible {
+  border-color: var(--ink);
+  color: var(--ink);
+  outline: none;
+}
+
+.privacy-page { min-height: 100svh; }
+.privacy-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  border-bottom: 1px solid var(--line);
+}
+.privacy-content {
+  max-width: 820px;
+  padding: 104px 0 132px;
+}
+.privacy-content h1 {
+  max-width: 760px;
+  margin: 18px 0 32px;
+  font-size: clamp(58px, 8vw, 108px);
+  line-height: 0.9;
+  letter-spacing: -0.065em;
+}
+.privacy-lead {
+  margin: 0 0 72px;
+  color: var(--muted);
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(22px, 3vw, 31px);
+  line-height: 1.45;
+}
+.privacy-content section {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 36px;
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.privacy-content section:last-child { border-bottom: 1px solid var(--line); }
+.privacy-content h2,
+.privacy-content section p { margin: 0; }
+.privacy-content h2 { font-size: 18px; }
+.privacy-content section p {
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.privacy-content section a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; }
+
 /* Scroll-triggered editorial reveals */
 .reveal-ready [data-reveal='section'] {
   opacity: 0;
@@ -1026,6 +1166,22 @@ h1 em, h2 em {
 }
 
 @media (max-width: 600px) {
+  .analytics-consent {
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .analytics-consent-actions { display: grid; grid-template-columns: 1fr 1fr; }
+  .analytics-consent-actions button { padding-inline: 10px; }
+  .privacy-header { min-height: 76px; }
+  .privacy-header .text-link { font-size: 12px; }
+  .privacy-content { padding: 76px 0 100px; }
+  .privacy-content h1 { font-size: clamp(50px, 16vw, 72px); }
+  .privacy-lead { margin-bottom: 52px; }
+  .privacy-content section { grid-template-columns: 1fr; gap: 12px; }
   .section-shell, .site-header { width: min(100% - 32px, 1280px); }
   .site-header { height: 74px; }
   .brand > span:last-child { display: none; }
