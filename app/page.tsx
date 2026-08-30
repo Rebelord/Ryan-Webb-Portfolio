@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ThemeToggle from './theme-toggle';
 
 const clientSites = [
   { number: '01', title: 'Keim Financial Group', category: 'Financial planning', url: 'https://www.keimfinancialgroup.com/', image: '/projects/client-sites/keim-financial-group.webp', alt: 'Sailboat crossing bright blue water, imagery featured by Keim Financial Group', width: 1200, height: 387 },
@@ -136,9 +137,12 @@ export default function Home() {
           <a href="#contact">Contact</a>
         </nav>
 
-        <a className="header-link" href="#contact">
-          Let&apos;s talk <Arrow diagonal />
-        </a>
+        <div className="header-actions">
+          <ThemeToggle />
+          <a className="header-link" href="#contact">
+            Let&apos;s talk <Arrow diagonal />
+          </a>
+        </div>
       </header>
 
       <section className="hero section-shell" id="top">

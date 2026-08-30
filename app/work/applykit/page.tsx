@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import ThemeToggle from '../../theme-toggle';
 
 export const metadata: Metadata = {
   title: 'ApplyKit Case Study | Ryan Webb',
@@ -93,9 +94,12 @@ export default function ApplyKitCaseStudy() {
           <Link href="/#contact">Contact</Link>
         </nav>
 
-        <Link className="header-link" href="/#work">
-          All work <Arrow diagonal />
-        </Link>
+        <div className="header-actions">
+          <ThemeToggle />
+          <Link className="header-link" href="/#work">
+            All work <Arrow diagonal />
+          </Link>
+        </div>
       </header>
 
       <article>

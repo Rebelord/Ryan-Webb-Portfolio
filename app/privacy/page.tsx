@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import ThemeToggle from '../theme-toggle';
 
 export const metadata: Metadata = {
   title: 'Privacy | Ryan Webb',
@@ -15,9 +16,12 @@ export default function PrivacyPage() {
           <span className="brand-mark">RW</span>
           <span>Ryan Webb</span>
         </Link>
-        <Link className="text-link" href="/">
-          Return home <span aria-hidden="true">→</span>
-        </Link>
+        <div className="header-actions">
+          <ThemeToggle />
+          <Link className="text-link" href="/">
+            Return home <span aria-hidden="true">→</span>
+          </Link>
+        </div>
       </header>
 
       <article className="privacy-content">

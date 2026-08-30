@@ -34,11 +34,41 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitializationScript = `
+  (function () {
+    try {
+      var savedTheme = window.localStorage.getItem('ryan-webb-theme');
+      var preference = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme
+        : 'system';
+      var theme = preference === 'system'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : preference;
+      var root = document.documentElement;
+      root.dataset.themePreference = preference;
+      root.dataset.theme = theme;
+      root.style.colorScheme = theme;
+      var themeColor = document.querySelector('meta[name="theme-color"]');
+      if (themeColor) {
+        themeColor.setAttribute('content', theme === 'dark' ? '#121310' : '#f4f1ea');
+      }
+    } catch (error) {
+      document.documentElement.removeAttribute('data-theme');
+      document.documentElement.dataset.themePreference = 'system';
+    }
+  })();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <meta name="color-scheme" content="light dark" />
+        <meta name="theme-color" content="#f4f1ea" />
+        <script dangerouslySetInnerHTML={{ __html: themeInitializationScript }} />
+      </head>
       <body>
         {children}
         <RevealOnScroll />
