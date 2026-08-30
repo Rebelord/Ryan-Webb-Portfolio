@@ -1,19 +1,23 @@
 'use client';
 
-import { useEffect, useId, useRef, useState } from 'react';
+import {
+  useEffect,
+  useRef,
+  useState,
+  type KeyboardEvent,
+} from 'react';
 
-type ThemePreference = 'system' | 'light' | 'dark';
+type ThemePreference = 'light' | 'system' | 'dark';
 type ResolvedTheme = 'light' | 'dark';
 
 const themeStorageKey = 'ryan-webb-theme';
 const themeOptions: Array<{
   value: ThemePreference;
   label: string;
-  description: string;
 }> = [
-  { value: 'system', label: 'System', description: 'Follow this device' },
-  { value: 'light', label: 'Light', description: 'Always use light mode' },
-  { value: 'dark', label: 'Dark', description: 'Always use dark mode' },
+  { value: 'light', label: 'Light theme' },
+  { value: 'system', label: 'Follow system theme' },
+  { value: 'dark', label: 'Dark theme' },
 ];
 
 function getSystemTheme(): ResolvedTheme {
@@ -52,16 +56,22 @@ function getSavedPreference(): ThemePreference {
   }
 }
 
+function ThemeIcon({ theme }: { theme: ThemePreference }) {
+  return (
+    <span
+      className={`theme-icon theme-icon--${theme}`}
+      aria-hidden="true"
+    />
+  );
+}
+
 export default function ThemeToggle() {
   const [preference, setPreference] =
     useState<ThemePreference>('system');
   const [resolvedTheme, setResolvedTheme] =
     useState<ResolvedTheme>('light');
-  const [isOpen, setIsOpen] = useState(false);
-  const pickerRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLButtonElement>(null);
+  const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const preferenceRef = useRef<ThemePreference>('system');
-  const panelId = useId();
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
@@ -76,29 +86,11 @@ export default function ThemeToggle() {
       if (preferenceRef.current !== 'system') return;
       setResolvedTheme(applyTheme('system'));
     };
-    const handlePointerDown = (event: PointerEvent) => {
-      if (
-        pickerRef.current &&
-        !pickerRef.current.contains(event.target as Node)
-      ) {
-        setIsOpen(false);
-      }
-    };
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key !== 'Escape') return;
-      setIsOpen(false);
-      triggerRef.current?.focus();
-    };
 
     mediaQuery.addEventListener('change', handleSystemThemeChange);
-    document.addEventListener('pointerdown', handlePointerDown);
-    document.addEventListener('keydown', handleKeyDown);
-
     return () => {
       window.clearTimeout(initializeTheme);
       mediaQuery.removeEventListener('change', handleSystemThemeChange);
-      document.removeEventListener('pointerdown', handlePointerDown);
-      document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
@@ -116,59 +108,59 @@ export default function ThemeToggle() {
     preferenceRef.current = nextPreference;
     setPreference(nextPreference);
     setResolvedTheme(applyTheme(nextPreference));
-    setIsOpen(false);
-    triggerRef.current?.focus();
+  }
+
+  function handleKeyDown(
+    event: KeyboardEvent<HTMLButtonElement>,
+    currentIndex: number,
+  ) {
+    let nextIndex = currentIndex;
+
+    if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+      nextIndex = (currentIndex + 1) % themeOptions.length;
+    } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+      nextIndex =
+        (currentIndex - 1 + themeOptions.length) % themeOptions.length;
+    } else if (event.key === 'Home') {
+      nextIndex = 0;
+    } else if (event.key === 'End') {
+      nextIndex = themeOptions.length - 1;
+    } else {
+      return;
+    }
+
+    event.preventDefault();
+    const nextPreference = themeOptions[nextIndex].value;
+    selectPreference(nextPreference);
+    optionRefs.current[nextIndex]?.focus();
   }
 
   return (
     <div
+      aria-label={`Color theme. Current appearance: ${resolvedTheme}.`}
       className="theme-picker"
-      onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) {
-          setIsOpen(false);
-        }
-      }}
-      ref={pickerRef}
+      role="radiogroup"
     >
-      <button
-        aria-controls={panelId}
-        aria-expanded={isOpen}
-        aria-label={`Color theme: ${preference}. Current appearance: ${resolvedTheme}.`}
-        className="theme-trigger"
-        onClick={() => setIsOpen((open) => !open)}
-        ref={triggerRef}
-        type="button"
-      >
-        <span className="theme-swatch" aria-hidden="true" />
-        <span className="theme-trigger-label">Theme</span>
-        <span className="theme-trigger-value">{preference}</span>
-      </button>
-
-      {isOpen ? (
-        <div
-          aria-label="Choose a color theme"
-          className="theme-panel"
-          id={panelId}
-          role="group"
+      <span className="theme-selection" aria-hidden="true" />
+      {themeOptions.map((option, index) => (
+        <button
+          aria-checked={preference === option.value}
+          aria-label={option.label}
+          className="theme-choice"
+          data-label={option.label}
+          key={option.value}
+          onClick={() => selectPreference(option.value)}
+          onKeyDown={(event) => handleKeyDown(event, index)}
+          ref={(element) => {
+            optionRefs.current[index] = element;
+          }}
+          role="radio"
+          tabIndex={preference === option.value ? 0 : -1}
+          type="button"
         >
-          <p>Color theme</p>
-          {themeOptions.map((option) => (
-            <button
-              aria-pressed={preference === option.value}
-              className="theme-option"
-              key={option.value}
-              onClick={() => selectPreference(option.value)}
-              type="button"
-            >
-              <span>
-                <strong>{option.label}</strong>
-                <small>{option.description}</small>
-              </span>
-              <span className="theme-option-indicator" aria-hidden="true" />
-            </button>
-          ))}
-        </div>
-      ) : null}
+          <ThemeIcon theme={option.value} />
+        </button>
+      ))}
     </div>
   );
 }
