@@ -57,6 +57,18 @@ function getSavedPreference(): ThemePreference {
 }
 
 function ThemeIcon({ theme }: { theme: ThemePreference }) {
+  if (theme === 'light') {
+    return (
+      <span className="theme-icon theme-icon--light" aria-hidden="true">
+        <span className="theme-sun-core" />
+        <span className="theme-sun-ray theme-sun-ray--one" />
+        <span className="theme-sun-ray theme-sun-ray--two" />
+        <span className="theme-sun-ray theme-sun-ray--three" />
+        <span className="theme-sun-ray theme-sun-ray--four" />
+      </span>
+    );
+  }
+
   return (
     <span
       className={`theme-icon theme-icon--${theme}`}
