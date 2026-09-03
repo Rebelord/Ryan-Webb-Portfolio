@@ -213,7 +213,7 @@ export default function Home() {
               src="/projects/applykit-overview.webp"
               alt="ApplyKit running in a desktop mockup with a selected job and explainable fit analysis"
               width={800}
-              height={533}
+              height={450}
               loading="lazy"
               unoptimized
             />

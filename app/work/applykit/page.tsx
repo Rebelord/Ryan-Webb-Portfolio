@@ -243,8 +243,8 @@ export default function ApplyKitCaseStudy() {
             <Image
               src="/projects/applykit/search-profile.webp"
               alt="ApplyKit Search Profile reference with target titles, required skills, preferred skills, avoided terms, salary, location, and remote preference"
-              width={1119}
-              height={1328}
+              width={1100}
+              height={1306}
               unoptimized
             />
             <figcaption>The search profile exposes the inputs behind every score.</figcaption>
@@ -279,8 +279,8 @@ export default function ApplyKitCaseStudy() {
             <Image
               src="/projects/applykit/interview-detail.webp"
               alt="ApplyKit job detail reference showing an Interview status with round, date, interviewers, type, and preparation notes using demonstration data"
-              width={1091}
-              height={1328}
+              width={1100}
+              height={1340}
               unoptimized
             />
             <figcaption>Stage-specific fields keep interview preparation in the application’s existing context.</figcaption>
@@ -301,15 +301,15 @@ export default function ApplyKitCaseStudy() {
           </div>
           <div className="case-gallery applykit-gallery" data-reveal="stagger">
             <figure>
-              <Image src="/projects/applykit/add-job.webp" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1119} height={1328} unoptimized />
+              <Image src="/projects/applykit/add-job.webp" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1100} height={1306} unoptimized />
               <figcaption>Focused entry supports manual details alongside URL-based draft import.</figcaption>
             </figure>
             <figure>
-              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit bulk-selection workspace summarizing three selected roles, their status mix, collective fit, and available actions" width={1106} height={1201} unoptimized />
+              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit bulk-selection workspace summarizing three selected roles, their status mix, collective fit, and available actions" width={1200} height={880} unoptimized />
               <figcaption>The refined bulk view summarizes the selection before exposing changes across multiple records.</figcaption>
             </figure>
             <figure className="gallery-tall">
-              <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, and local-storage information" width={1091} height={900} unoptimized />
+              <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, appearance, and local-storage information" width={1200} height={990} unoptimized />
               <figcaption>Data controls make backup, migration, reminders, and local storage visible.</figcaption>
             </figure>
           </div>
