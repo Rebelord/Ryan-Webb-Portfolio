@@ -208,12 +208,12 @@ export default function Home() {
         </div>
 
         <article className="product-feature" data-reveal="section">
-          <div className="product-visual">
+          <div className="product-visual product-visual--applykit">
             <Image
               src="/projects/applykit-overview.webp"
-              alt="ApplyKit macOS job application tracker interface"
+              alt="ApplyKit running in a desktop mockup with a selected job and explainable fit analysis"
               width={800}
-              height={450}
+              height={533}
               loading="lazy"
               unoptimized
             />

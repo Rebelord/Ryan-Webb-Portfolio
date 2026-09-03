@@ -126,14 +126,14 @@ export default function ApplyKitCaseStudy() {
 
           <figure className="case-hero-media applykit-media">
             <Image
-              src="/projects/applykit/main-window.webp"
-              alt="ApplyKit macOS workspace with status navigation, demonstration job applications, and a selected role’s details and fit score"
-              width={1091}
-              height={1328}
+              src="/projects/applykit/product-overview.webp"
+              alt="ApplyKit shown in a desktop mockup with a selected product-design role, application details, and explainable fit analysis"
+              width={1200}
+              height={800}
               priority
               unoptimized
             />
-            <figcaption>A Figma reference for the connected workspace, using demonstration data rather than the private live tracker.</figcaption>
+            <figcaption>The refined ApplyKit workspace, presented with demonstration data rather than the private live tracker.</figcaption>
           </figure>
         </header>
 
@@ -153,6 +153,28 @@ export default function ApplyKitCaseStudy() {
               evidence, notes, follow-ups, and interview details into one native
               desktop workspace, without making a hosted account the center of the experience.
             </p>
+          </div>
+          <div className="case-gallery applykit-gallery applykit-onboarding-gallery" data-reveal="stagger">
+            <figure>
+              <Image
+                src="/projects/applykit/welcome.webp"
+                alt="ApplyKit welcome screen guiding a new user to set up the search profile used for fit scoring"
+                width={1106}
+                height={1201}
+                unoptimized
+              />
+              <figcaption>The welcome state explains why a search profile matters before asking for setup.</figcaption>
+            </figure>
+            <figure>
+              <Image
+                src="/projects/applykit/empty-library.webp"
+                alt="ApplyKit empty job library with options to import a job from a URL or create one manually"
+                width={1106}
+                height={1201}
+                unoptimized
+              />
+              <figcaption>The empty library turns a blank workspace into two clear ways to add the first role.</figcaption>
+            </figure>
           </div>
           <ol className="goal-grid">
             {principles.map((principle, index) => (
@@ -187,6 +209,16 @@ export default function ApplyKitCaseStudy() {
               <div><strong>20</strong><span>Preferred terms</span></div>
               <div><strong>−30</strong><span>Maximum avoided-term penalty</span></div>
             </div>
+            <figure className="qa-media applykit-media applykit-detail-media">
+              <Image
+                src="/projects/applykit/job-detail.webp"
+                alt="ApplyKit job detail workspace showing a selected role, application fields, an 88-point fit score, and matched, missing, and avoided terms"
+                width={1105}
+                height={1201}
+                unoptimized
+              />
+              <figcaption>The updated detail view keeps the fit result and the evidence behind it visible beside the working record.</figcaption>
+            </figure>
           </div>
         </section>
 
@@ -273,8 +305,8 @@ export default function ApplyKitCaseStudy() {
               <figcaption>Focused entry supports manual details alongside URL-based draft import.</figcaption>
             </figure>
             <figure>
-              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit job list reference in bulk-selection mode with several demonstration roles selected" width={1091} height={800} unoptimized />
-              <figcaption>Bulk selection supports status changes and deletion across multiple records.</figcaption>
+              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit bulk-selection workspace summarizing three selected roles, their status mix, collective fit, and available actions" width={1106} height={1201} unoptimized />
+              <figcaption>The refined bulk view summarizes the selection before exposing changes across multiple records.</figcaption>
             </figure>
             <figure className="gallery-tall">
               <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, and local-storage information" width={1091} height={900} unoptimized />
