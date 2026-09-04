@@ -159,8 +159,8 @@ export default function ApplyKitCaseStudy() {
               <Image
                 src="/projects/applykit/welcome.webp"
                 alt="ApplyKit welcome screen guiding a new user to set up the search profile used for fit scoring"
-                width={1106}
-                height={1201}
+                width={1280}
+                height={800}
                 unoptimized
               />
               <figcaption>The welcome state explains why a search profile matters before asking for setup.</figcaption>
@@ -169,8 +169,8 @@ export default function ApplyKitCaseStudy() {
               <Image
                 src="/projects/applykit/empty-library.webp"
                 alt="ApplyKit empty job library with options to import a job from a URL or create one manually"
-                width={1106}
-                height={1201}
+                width={1280}
+                height={800}
                 unoptimized
               />
               <figcaption>The empty library turns a blank workspace into two clear ways to add the first role.</figcaption>
@@ -209,16 +209,28 @@ export default function ApplyKitCaseStudy() {
               <div><strong>20</strong><span>Preferred terms</span></div>
               <div><strong>−30</strong><span>Maximum avoided-term penalty</span></div>
             </div>
-            <figure className="qa-media applykit-media applykit-detail-media">
-              <Image
-                src="/projects/applykit/job-detail.webp"
-                alt="ApplyKit job detail workspace showing a selected role, application fields, an 88-point fit score, and matched, missing, and avoided terms"
-                width={1105}
-                height={1201}
-                unoptimized
-              />
-              <figcaption>The updated detail view keeps the fit result and the evidence behind it visible beside the working record.</figcaption>
-            </figure>
+            <div className="case-gallery applykit-gallery applykit-fit-gallery" data-reveal="stagger">
+              <figure>
+                <Image
+                  src="/projects/applykit/job-detail.webp"
+                  alt="ApplyKit job detail workspace with a selected product-design role and matched, missing, and avoided fit terms"
+                  width={1280}
+                  height={800}
+                  unoptimized
+                />
+                <figcaption>A strong-match result keeps the score and its supporting evidence beside the working record.</figcaption>
+              </figure>
+              <figure>
+                <Image
+                  src="/projects/applykit/weak-match.webp"
+                  alt="ApplyKit weak-match state explaining missing and avoided terms behind a lower fit score"
+                  width={1280}
+                  height={800}
+                  unoptimized
+                />
+                <figcaption>A weak-match state makes the gaps and exclusions behind a lower score equally visible.</figcaption>
+              </figure>
+            </div>
           </div>
         </section>
 
@@ -294,22 +306,27 @@ export default function ApplyKitCaseStudy() {
               <h2>Start anywhere. Keep an exit path.</h2>
             </div>
             <p>
-              Manual and URL-based entry support new roles. CSV and TSV import,
-              duplicate handling, bulk status changes, CSV export, and JSON backup
-              help an existing search move in, and let the data move back out.
+              Status filters keep the working list focused. Manual and URL-based
+              entry support new roles, while CSV and TSV import, duplicate handling,
+              bulk status changes, CSV export, and JSON backup help an existing
+              search move in, and let the data move back out.
             </p>
           </div>
           <div className="case-gallery applykit-gallery" data-reveal="stagger">
+            <figure>
+              <Image src="/projects/applykit/filtered-view.webp" alt="ApplyKit job list filtered by application status while retaining the selected job detail" width={1280} height={800} unoptimized />
+              <figcaption>Filtering narrows the list without removing the selected role’s working context.</figcaption>
+            </figure>
+            <figure>
+              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit bulk-selection workspace summarizing three selected roles, their status mix, collective fit, and available actions" width={1280} height={800} unoptimized />
+              <figcaption>The refined bulk view summarizes the selection before exposing changes across multiple records.</figcaption>
+            </figure>
             <figure>
               <Image src="/projects/applykit/add-job.webp" alt="ApplyKit Add Job reference with role details, status, description, notes, and follow-up controls" width={1100} height={1306} unoptimized />
               <figcaption>Focused entry supports manual details alongside URL-based draft import.</figcaption>
             </figure>
             <figure>
-              <Image src="/projects/applykit/bulk-selection.webp" alt="ApplyKit bulk-selection workspace summarizing three selected roles, their status mix, collective fit, and available actions" width={1200} height={880} unoptimized />
-              <figcaption>The refined bulk view summarizes the selection before exposing changes across multiple records.</figcaption>
-            </figure>
-            <figure className="gallery-tall">
-              <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, appearance, and local-storage information" width={1200} height={990} unoptimized />
+              <Image src="/projects/applykit/settings.webp" alt="ApplyKit Settings reference showing export, backup, import, reminder, appearance, and local-storage information" width={1100} height={1344} unoptimized />
               <figcaption>Data controls make backup, migration, reminders, and local storage visible.</figcaption>
             </figure>
           </div>

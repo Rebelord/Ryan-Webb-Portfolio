@@ -211,7 +211,7 @@ export default function Home() {
           <div className="product-visual product-visual--applykit">
             <Image
               src="/projects/applykit-overview.webp"
-              alt="ApplyKit running in a desktop mockup with a selected job and explainable fit analysis"
+              alt="ApplyKit macOS workspace showing saved jobs, application details, and an explainable 88-point fit score"
               width={800}
               height={450}
               loading="lazy"

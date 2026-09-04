@@ -1215,8 +1215,7 @@ h1 em, h2 em {
 .applykit-media img { background: #f4f6fb; }
 .case-hero-media.applykit-media img { background: transparent; }
 .applykit-onboarding-gallery { margin-top: 80px; }
-.applykit-detail-media { margin-top: 64px; background: #0d1d3a; border-color: rgba(250, 248, 242, 0.18); }
-.applykit-detail-media figcaption { color: rgba(250, 248, 242, 0.63); }
+.applykit-fit-gallery { margin-top: 64px; }
 .goal-grid p strong {
   display: block;
   margin-bottom: 10px;
