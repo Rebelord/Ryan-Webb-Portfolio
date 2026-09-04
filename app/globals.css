@@ -538,10 +538,11 @@ a:hover .arrow.diagonal { transform: rotate(-45deg) translate(4px, 0); }
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
-.hero-kicker { display: flex; align-items: center; gap: 10px; }
+.hero-kicker { display: flex; align-items: center; gap: 5px; }
 .status-dot {
   width: 8px;
   height: 8px;
+  margin-left: 5px;
   border-radius: 50%;
   background: var(--status);
   box-shadow: 0 0 0 5px var(--status-glow);
