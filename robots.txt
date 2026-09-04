@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://ryandwebb.com
+Sitemap: https://ryandwebb.com/sitemap.xml

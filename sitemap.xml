@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://ryandwebb.com/</loc>
+<lastmod>2026-09-04T04:08:06.709Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>1</priority>
+</url>
+<url>
+<loc>https://ryandwebb.com/work/applykit/</loc>
+<lastmod>2026-09-04T04:08:06.709Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ryandwebb.com/work/the-chosen-quest/</loc>
+<lastmod>2026-09-04T04:08:06.709Z</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://ryandwebb.com/privacy/</loc>
+<lastmod>2026-09-04T04:08:06.709Z</lastmod>
+<changefreq>yearly</changefreq>
+<priority>0.2</priority>
+</url>
+</urlset>
