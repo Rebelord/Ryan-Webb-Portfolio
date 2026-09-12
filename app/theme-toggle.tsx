@@ -9,6 +9,7 @@ import {
 
 type ThemePreference = 'light' | 'system' | 'dark';
 type ResolvedTheme = 'light' | 'dark';
+type InputMethod = 'pointer' | 'keyboard';
 
 const themeStorageKey = 'ryan-webb-theme';
 const themeOptions: Array<{
@@ -54,6 +55,22 @@ function getSavedPreference(): ThemePreference {
   } catch {
     return 'system';
   }
+}
+
+function applyThemeInputMethod(inputMethod: InputMethod) {
+  const root = document.documentElement;
+
+  if (inputMethod === 'keyboard') {
+    root.dataset.themeInput = 'keyboard';
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        delete root.dataset.themeInput;
+      });
+    });
+    return;
+  }
+
+  delete root.dataset.themeInput;
 }
 
 function ThemeIcon({ theme }: { theme: ThemePreference }) {
@@ -106,7 +123,12 @@ export default function ThemeToggle() {
     };
   }, []);
 
-  function selectPreference(nextPreference: ThemePreference) {
+  function selectPreference(
+    nextPreference: ThemePreference,
+    inputMethod: InputMethod = 'pointer',
+  ) {
+    applyThemeInputMethod(inputMethod);
+
     try {
       if (nextPreference === 'system') {
         window.localStorage.removeItem(themeStorageKey);
@@ -143,7 +165,7 @@ export default function ThemeToggle() {
 
     event.preventDefault();
     const nextPreference = themeOptions[nextIndex].value;
-    selectPreference(nextPreference);
+    selectPreference(nextPreference, 'keyboard');
     optionRefs.current[nextIndex]?.focus();
   }
 
@@ -161,7 +183,7 @@ export default function ThemeToggle() {
           className="theme-choice"
           data-label={option.label}
           key={option.value}
-          onClick={() => selectPreference(option.value)}
+          onClick={() => selectPreference(option.value, 'pointer')}
           onKeyDown={(event) => handleKeyDown(event, index)}
           ref={(element) => {
             optionRefs.current[index] = element;

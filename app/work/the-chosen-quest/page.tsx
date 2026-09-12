@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import ThemeToggle from '../../theme-toggle';
+import NextProject from '../next-project';
 
 export const metadata: Metadata = {
   title: 'The Chosen Quest Case Study | Ryan Webb',
@@ -317,6 +318,14 @@ export default function TheChosenQuestCaseStudy() {
           </div>
         </section>
       </article>
+
+      <NextProject
+        eyebrow="Continue exploring"
+        href="/work/applykit/"
+        summary="A private, local-first macOS product designed to make job-search decisions calmer, clearer, and easier to act on."
+        title="ApplyKit"
+        tone="blue"
+      />
 
       <footer className="site-footer section-shell">
         <Link className="footer-brand" href="/">Ryan Webb</Link>

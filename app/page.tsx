@@ -208,7 +208,11 @@ export default function Home() {
         </div>
 
         <article className="product-feature" data-reveal="section">
-          <div className="product-visual product-visual--applykit">
+          <a
+            aria-label="View the ApplyKit case study"
+            className="product-visual product-visual--applykit"
+            href="/work/applykit/"
+          >
             <Image
               src="/projects/applykit-overview.webp"
               alt="ApplyKit macOS workspace showing saved jobs, application details, and an explainable 88-point fit score"
@@ -218,7 +222,7 @@ export default function Home() {
               unoptimized
             />
             <span className="project-number">01 / Owned product</span>
-          </div>
+          </a>
 
           <div className="product-copy">
             <p className="project-category">Product design · SwiftUI · macOS</p>
@@ -263,7 +267,11 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="product-visual product-visual--quest">
+          <a
+            aria-label="View The Chosen Quest case study"
+            className="product-visual product-visual--quest"
+            href="/work/the-chosen-quest/"
+          >
             <Image
               src="/projects/the-chosen-quest/character-creation.webp"
               alt="The Chosen Quest character creation interface showing race, class, Combat Path, portrait, statistics, and equipment choices"
@@ -273,7 +281,7 @@ export default function Home() {
               unoptimized
             />
             <span className="project-number">02 / Independent case study</span>
-          </div>
+          </a>
         </article>
 
         <div className="client-intro" data-reveal="section">
