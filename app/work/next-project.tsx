@@ -28,7 +28,9 @@ export default function NextProject({
         <span className="next-project-eyebrow">{eyebrow}</span>
         <span className="next-project-title">{title}</span>
         <span className="next-project-summary">{summary}</span>
-        <span aria-hidden="true" className="next-project-arrow">↗</span>
+        <span aria-hidden="true" className="next-project-arrow">
+          <span className="arrow diagonal">→</span>
+        </span>
       </Link>
     </aside>
   );

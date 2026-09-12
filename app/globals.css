@@ -1549,8 +1549,8 @@ h1 em, h2 em {
   border: 1px solid currentColor;
   border-radius: 50%;
   font-size: 25px;
-  transition: transform var(--duration-ui) var(--ease-out);
 }
+.next-project-arrow .arrow { margin-left: 0; }
 
 .site-footer {
   display: grid;
@@ -1617,9 +1617,6 @@ h1 em, h2 em {
   .archive-card:hover .archive-browser img { transform: translateY(-5%); }
 
   .next-project-link:hover::before { transform: scale(1.08); }
-  .next-project-link:hover .next-project-arrow {
-    transform: translate3d(4px, -4px, 0);
-  }
 }
 
 /* Keep tall desktop windows editorial rather than stretching the hero artwork
@@ -1808,7 +1805,7 @@ h1 em, h2 em {
   .archive-browser img,
   .next-project-link,
   .next-project-link::before,
-  .next-project-arrow {
+  .next-project-arrow .arrow {
     transition: none !important;
   }
   .circle-link:active,
@@ -1829,8 +1826,7 @@ h1 em, h2 em {
   .product-visual:hover:not(:active) img,
   .client-card:hover .client-card-media img,
   .archive-card:hover .archive-browser img,
-  .next-project-link:hover::before,
-  .next-project-link:hover .next-project-arrow { transform: none; }
+  .next-project-link:hover::before { transform: none; }
   a:hover .arrow { transform: none; }
   a:hover .arrow.diagonal { transform: rotate(-45deg); }
 }
